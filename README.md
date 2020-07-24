@@ -11,7 +11,6 @@ This is a Responsive Whatsapp Web Clone, this project was made to improve my Ski
 ## Style guide tools
 
 - [Eslint](https://eslint.org).
-- [Prettier](http://prettier.io).
 - [Lint-staged](https://github.com/okonet/lint-staged).
 - [Husky](https://github.com/typicode/husky).
 - [Git-commit-msg-linter](https://github.com/legend80s/commit-msg-linter#readme).
