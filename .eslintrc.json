@@ -24,8 +24,8 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "import/extensions": "off",
         "import/no-unresolved": "off",
+        "import/extensions": "off",
         "react/jsx-filename-extension": "off"
     }
 }
