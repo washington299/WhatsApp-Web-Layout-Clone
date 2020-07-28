@@ -1,0 +1,43 @@
+@import '../../styles/global/colors.scss';
+@import '../../styles/core/screen-size.scss';
+
+.header-background {
+  background-color: $layout-primary-color;
+}
+
+.container {
+  margin: auto;
+}
+
+header {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  color: $font-secondary-color;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    text-transform: uppercase;
+    
+    svg {
+      font-size: 40px;
+      margin-right: 10px;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+.header-complement {
+  height: 130px;
+}
+
+@media screen and (min-width: $screen-sm) {
+  .container {
+    width: 80%;
+  }
+}
