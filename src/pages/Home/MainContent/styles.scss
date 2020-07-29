@@ -1,7 +1,16 @@
 @import '../../../styles';
 
 main {
+  display: flex;
+  flex-direction: column;
   background-color: $layout-quinary-color;
   color: $font-primary-color;
   padding: 20px;
+}
+
+@media screen and (min-width: $screen-md) {
+  main {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
