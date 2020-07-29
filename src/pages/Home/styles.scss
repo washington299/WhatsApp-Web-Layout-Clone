@@ -8,56 +8,11 @@
   margin: auto;
 }
 
-main {
-  background-color: $layout-quinary-color;
-  color: $font-primary-color;
-  padding: 20px;
-
-  h2 {
-    margin: 0;
-    font-weight: normal;
-    font-size: 18px;
-  }
-
-  ul {
-    padding-inline-start: 20px;
-
-    li {
-      margin-bottom: 10px;
-      list-style: decimal;
-
-      svg {
-        font-size: 18px;
-        background-color: $layout-tertiary-color;
-      }
-    }
-  }
-
-  a {
-    display: block;
-    margin-top: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    color: $layout-secondary-color;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
 @media screen and (min-width: $screen-sm) {
   .top-background {
     height: 220px;
   }
   .container {
     width: 80%;
-  }
-}
-
-@media screen and (min-width: $screen-md) {
-  main h2 {
-    font-size: 24px;
   }
 }
