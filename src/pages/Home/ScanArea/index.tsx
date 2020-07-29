@@ -5,6 +5,7 @@ import './styles.scss';
 
 const ScanArea: React.FC = () => {
   const [validQrCode, setValidQrCode] = useState(true);
+  const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
     const time = () => {
@@ -40,10 +41,17 @@ const ScanArea: React.FC = () => {
         </div>
       </div>
       <div className="reminder-box">
-        <input type="checkbox" />
+        <span className="arrow" style={isChecked ? { display: 'none' } : { display: 'block' }} />
+        <input
+          type="checkbox"
+          onChange={() => setIsChecked(!isChecked)}
+          checked={isChecked}
+        />
         <span>Keep me signed in</span>
       </div>
-      <div className="info-msg">You&apos;ll be logged out after several minutes of inativity</div>
+      {!isChecked && (
+        <div className="info-msg">You&apos;ll be logged out after several minutes of inativity</div>
+      )}
     </section>
   );
 };
