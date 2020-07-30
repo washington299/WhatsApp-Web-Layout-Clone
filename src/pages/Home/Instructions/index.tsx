@@ -28,7 +28,7 @@ const Instructions: React.FC = () => (
       </li>
       <li>Point your phone to this screen to capture the code.</li>
     </ul>
-    <a href="/">Need help to get started?</a>
+    <a href="/" className="help-link">Need help to get started?</a>
   </div>
 );
 
