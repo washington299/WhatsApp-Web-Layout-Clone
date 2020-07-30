@@ -5,11 +5,31 @@
   height: auto;
   background-color: $layout-senary-color;
 
-  .video-box img,
-  .video-box video {
+  .video-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img, video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .play-button-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100%;
-    cursor: pointer;
+    z-index: 1;
+    opacity: 0.5;
+    position: absolute;
+
+    svg {
+      cursor: pointer;
+      font-size: 100px;
+      color: #000;
+    }
   }
 }
 

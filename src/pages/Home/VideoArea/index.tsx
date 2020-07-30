@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
+import { GoPlay } from 'react-icons/go';
 
 import './styles.scss';
 
@@ -9,11 +10,17 @@ const VideoArea: React.FC = () => {
   return (
     <section className="video-area">
       <div className="video-box">
+        {!displayVideo && (
+          <div className="play-button-area">
+            <div className="play-button" onClick={() => setDisplayVideo(true)}>
+              <GoPlay />
+            </div>
+          </div>
+        )}
         <img
           src="assets/images/video-thumbnail.jpg"
           alt="WhatsApp video thumbnail"
           crossOrigin="anonymous"
-          onClick={() => setDisplayVideo(true)}
           style={displayVideo ? { display: 'none' } : { display: 'block' }}
         />
         {displayVideo && (
