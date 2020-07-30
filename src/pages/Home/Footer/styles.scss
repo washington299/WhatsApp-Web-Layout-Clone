@@ -1,0 +1,28 @@
+@import '../../../styles/';
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  color: $font-secondary-color;
+  background-color: $layout-primary-color;
+
+  .made-by {
+    margin-left: 5px;
+    font-weight: bold;
+    color: $font-secondary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  footer {
+    margin-top: 50px;
+  }
+}
