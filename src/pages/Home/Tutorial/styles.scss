@@ -1,0 +1,14 @@
+@import '../../../styles';
+
+.tutorial {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+@media screen and (min-width: $screen-md) {
+  .tutorial {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}

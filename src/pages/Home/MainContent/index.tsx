@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Instructions from '../Instructions';
-import ScanArea from '../ScanArea';
+import Tutorial from '../Tutorial';
+import VideoArea from '../VideoArea';
 
 import './styles.scss';
 
 const MainContent: React.FC = () => (
   <main>
-    <Instructions />
-    <ScanArea />
+    <Tutorial />
+    <VideoArea />
   </main>
 );
 
