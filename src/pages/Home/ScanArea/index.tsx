@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BsArrowClockwise } from 'react-icons/bs';
+import QrCode from 'qrcode.react';
 
 import './styles.scss';
 
@@ -28,7 +29,7 @@ const ScanArea: React.FC = () => {
   return (
     <section className="scan-area">
       <div className="qr_code-area" style={validQrCode ? { opacity: 1 } : { opacity: 0.05 }}>
-        <img src="assets/images/qr-code.png" alt="" />
+        <QrCode size={250} value="https://portfolio.washingtoncampos9.now.sh" />
       </div>
       <div className="reload-qr-code">
         <div
