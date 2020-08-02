@@ -3,7 +3,7 @@
 h2 {
   margin: 0;
   font-weight: normal;
-  font-size: 18px;
+  font-size: $big-font-size;
 }
 
 ul {
@@ -14,7 +14,7 @@ ul {
     list-style: decimal;
 
     svg {
-      font-size: 18px;
+      font-size: $big-font-size;
       background-color: $layout-tertiary-color;
     }
   }
@@ -23,7 +23,7 @@ ul {
 .help-link {
   display: block;
   margin-top: 20px;
-  font-size: 14px;
+  font-size: $small-font-size;
   font-weight: 600;
   text-decoration: none;
   color: $layout-secondary-color;
@@ -35,15 +35,15 @@ ul {
 
 @media screen and (min-width: $screen-md) {
   h2 {
-    font-size: 24px;
+    font-size: $large-font-size;
     margin-top: 20px;
     margin-bottom: 20px;
   }
   ul li {
-    font-size: 17px;
+    font-size: $big-font-size;
     margin-bottom: 20px;
   }
   .help-link {
-    font-size: 16px;
+    font-size: $default-font-size;
   }
 }
