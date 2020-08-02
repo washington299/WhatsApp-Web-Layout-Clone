@@ -3,7 +3,7 @@
 .tutorial {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: $element-default-space-value;
 }
 
 @media screen and (min-width: $screen-md) {

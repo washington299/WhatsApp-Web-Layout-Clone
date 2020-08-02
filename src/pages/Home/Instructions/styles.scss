@@ -7,7 +7,7 @@ h2 {
 }
 
 ul {
-  padding-inline-start: 20px;
+  padding-inline-start: $element-default-space-value;
 
   li {
     margin-bottom: 10px;
@@ -22,7 +22,7 @@ ul {
 
 .help-link {
   display: block;
-  margin-top: 20px;
+  margin-top: $element-default-space-value;
   font-size: $small-font-size;
   font-weight: 600;
   text-decoration: none;
@@ -36,12 +36,11 @@ ul {
 @media screen and (min-width: $screen-md) {
   h2 {
     font-size: $large-font-size;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: $element-default-space-value;
   }
   ul li {
     font-size: $big-font-size;
-    margin-bottom: 20px;
+    margin-bottom: $element-default-space-value;
   }
   .help-link {
     font-size: $default-font-size;
