@@ -6,10 +6,12 @@ import VideoArea from '../VideoArea';
 import './styles.scss';
 
 const MainContent: React.FC = () => (
-  <main>
-    <Tutorial />
-    <VideoArea />
-  </main>
+  <div className="container">
+    <main>
+      <Tutorial />
+      <VideoArea />
+    </main>
+  </div>
 );
 
 export default MainContent;

@@ -7,15 +7,11 @@ import Footer from './Footer';
 import './styles.scss';
 
 const Home: React.FC = () => (
-  <>
-    <div className="top-background">
-      <section className="container">
-        <Header />
-        <MainContent />
-      </section>
-      <Footer />
-    </div>
-  </>
+  <div className="top-background">
+    <Header />
+    <MainContent />
+    <Footer />
+  </div>
 );
 
 export default Home;
