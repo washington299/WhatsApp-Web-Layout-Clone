@@ -15,6 +15,20 @@ This is a Responsive Whatsapp Web Clone, this project was made to improve my Ski
 - [Husky](https://github.com/typicode/husky).
 - [Git-commit-msg-linter](https://github.com/legend80s/commit-msg-linter#readme).
 
+## Material UI Icons
+
+- DonutLarge
+- Chat
+- MoreVert
+- NotificationsOff
+- Search
+- Colorize
+- VolumeOff
+- ExpandMore
+- Attachment
+- InsertEmoticon
+- Mic
+
 ## Libs
 
 - [React-router-dom](https://reactrouter.com).
