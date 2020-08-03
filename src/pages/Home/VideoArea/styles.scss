@@ -1,9 +1,10 @@
-@import '../../../styles/';
+@use '../../../styles/core/sizes';
+@use '../../../styles/global/colors';
 
 .video-area {
   width: 100%;
   height: auto;
-  background-color: $layout-senary-color;
+  background-color: colors.$layout-senary-color;
 
   .video-box {
     display: flex;
@@ -33,13 +34,13 @@
   }
 }
 
-@media screen and (min-width: $screen-lg) {
+@media screen and (min-width: sizes.$screen-lg) {
   .video-area .video-box {
     padding: 50px;
   }
 }
 
-@media screen and (min-width: $screen-xl) {
+@media screen and (min-width: sizes.$screen-xl) {
   .video-area .video-box {
     padding: 100px;
   }

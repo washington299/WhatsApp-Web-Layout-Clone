@@ -1,4 +1,5 @@
-@import '../../../styles/';
+@use '../../../styles/core/sizes';
+@use '../../../styles/global/colors';
 
 footer {
   width: 100%;
@@ -6,13 +7,13 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 15px 0;
-  color: $font-secondary-color;
-  background-color: $layout-primary-color;
+  color: colors.$font-secondary-color;
+  background-color: colors.$layout-primary-color;
 
   .made-by {
     margin-left: 5px;
     font-weight: bold;
-    color: $font-secondary-color;
+    color: colors.$font-secondary-color;
     text-decoration: none;
 
     &:hover {
@@ -21,7 +22,7 @@ footer {
   }
 }
 
-@media screen and (min-width: $screen-sm) {
+@media screen and (min-width: sizes.$screen-sm) {
   footer {
     margin-top: 50px;
   }

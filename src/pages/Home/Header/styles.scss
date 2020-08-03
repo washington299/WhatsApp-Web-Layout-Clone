@@ -1,31 +1,35 @@
-@import '../../../styles';
+@use '../../../styles/core/sizes';
+@use '../../../styles/core/wrapper';
+@use '../../../styles/global/colors';
+
+.container {
+  @include wrapper.container;
+}
 
 header {
   height: 90px;
   display: flex;
   align-items: center;
-  color: $font-secondary-color;
+  color: colors.$font-secondary-color;
 
   .logo {
     display: flex;
     align-items: center;
     text-transform: uppercase;
-    padding-left: 20px;
+    padding-left: sizes.$element-default-space-value;
     
     svg {
       font-size: 40px;
       margin-right: 10px;
     }
     span {
-      font-size: $default-font-size;
+      font-size: sizes.$default-font-size;
       font-weight: 600;
     }
   }
 }
 
-
-
-@media screen and (min-width: $screen-sm) {
+@media screen and (min-width: sizes.$screen-sm) {
   header .logo {
     padding-left: 0;
   }

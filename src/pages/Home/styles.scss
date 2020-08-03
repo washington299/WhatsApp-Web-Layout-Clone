@@ -1,18 +1,14 @@
-@import '../../styles';
+@use '../../styles/core/wrapper';
+@use '../../styles/core/sizes';
+@use '../../styles/global/colors';
 
 .top-background {
-  background-color: $layout-primary-color;
+  width: 100%;
+  background-color: colors.$layout-primary-color;
 }
 
-.container {
-  margin: auto;
-}
-
-@media screen and (min-width: $screen-sm) {
+@media screen and (min-width: sizes.$screen-sm) {
   .top-background {
     height: 220px;
-  }
-  .container {
-    width: 80%;
   }
 }

@@ -1,48 +1,49 @@
-@import '../../../styles';
+@use '../../../styles/core/sizes';
+@use '../../../styles/global/colors';
 
 h2 {
   margin: 0;
   font-weight: normal;
-  font-size: $big-font-size;
+  font-size: sizes.$big-font-size;
 }
 
 ul {
-  padding-inline-start: $element-default-space-value;
+  padding-inline-start: sizes.$element-default-space-value;
 
   li {
     margin-bottom: 10px;
     list-style: decimal;
 
     svg {
-      font-size: $big-font-size;
-      background-color: $layout-tertiary-color;
+      font-size: sizes.$big-font-size;
+      background-color: colors.$layout-tertiary-color;
     }
   }
 }
 
 .help-link {
   display: block;
-  margin-top: $element-default-space-value;
-  font-size: $small-font-size;
+  margin-top: sizes.$element-default-space-value;
+  font-size: sizes.$small-font-size;
   font-weight: 600;
   text-decoration: none;
-  color: $layout-secondary-color;
+  color: colors.$layout-secondary-color;
 
   &:hover {
     text-decoration: underline;
   }
 }
 
-@media screen and (min-width: $screen-md) {
+@media screen and (min-width: sizes.$screen-md) {
   h2 {
-    font-size: $large-font-size;
-    margin: $element-default-space-value;
+    font-size: sizes.$large-font-size;
+    margin: sizes.$element-default-space-value 0;
   }
   ul li {
-    font-size: $big-font-size;
-    margin-bottom: $element-default-space-value;
+    font-size: sizes.$big-font-size;
+    margin-bottom: sizes.$element-default-space-value;
   }
   .help-link {
-    font-size: $default-font-size;
+    font-size: sizes.$default-font-size;
   }
 }

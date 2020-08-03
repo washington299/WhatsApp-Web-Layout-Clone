@@ -1,4 +1,5 @@
-@import '../../../styles/';
+@use '../../../styles/core/sizes';
+@use '../../../styles/global/colors';
 
 .scan-area {
   display: flex;
@@ -32,8 +33,8 @@
       width: 70%;
       height: 70%;
       border-radius: 50%;
-      background-color: $layout-primary-color;
-      color: $font-secondary-color;
+      background-color: colors.$layout-primary-color;
+      color: colors.$font-secondary-color;
       cursor: pointer;
 
       svg {
@@ -42,7 +43,7 @@
       }
       span {
         text-align: center;
-        font-size: $default-font-size;
+        font-size: sizes.$default-font-size;
       }
     }
   }
@@ -58,7 +59,7 @@
       margin-left: -5px;
       position: absolute;
       border: 15px solid;
-      border-color: transparent transparent $layout-quaternary-color transparent;
+      border-color: transparent transparent colors.$layout-quaternary-color transparent;
     }
 
     input {
@@ -67,8 +68,8 @@
   }
 
   .info-msg {
-    background-color: $layout-quaternary-color;
-    color: $font-secondary-color;
+    background-color: colors.$layout-quaternary-color;
+    color: colors.$font-secondary-color;
     border-radius: 5px;
     padding: 10px;
     font-weight: 600;

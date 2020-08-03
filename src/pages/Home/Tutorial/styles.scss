@@ -1,12 +1,12 @@
-@import '../../../styles';
+@use '../../../styles/core/sizes';
 
 .tutorial {
   display: flex;
   flex-direction: column;
-  padding: $element-default-space-value;
+  padding: sizes.$element-default-space-value;
 }
 
-@media screen and (min-width: $screen-md) {
+@media screen and (min-width: sizes.$screen-md) {
   .tutorial {
     flex-direction: row;
     justify-content: space-evenly;
