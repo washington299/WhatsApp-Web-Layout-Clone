@@ -1,0 +1,10 @@
+@use '../core/sizes';
+
+@mixin container {
+  @media screen and (min-width: sizes.$screen-sm) {
+    padding: 0 5%;
+  }
+  @media screen and (min-width: sizes.$screen-xl) {
+    padding: 0 10%;
+  }
+}
