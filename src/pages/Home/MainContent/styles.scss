@@ -5,45 +5,6 @@
 .content {
   background-color: colors.$layout-quinary-color;
   color: colors.$font-primary-color;
-
-  .login {
-    display: flex;
-    flex-direction: column;
-    padding: sizes.$element-default-space-value;
-  }
-
-  .video {
-    width: 100%;
-    height: auto;
-    background-color: colors.$layout-senary-color;
-  
-    .video__area {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  
-      .video__thumb, .video__original-clip {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  
-    .video__play-button-area {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      z-index: 1;
-      opacity: 0.5;
-      position: absolute;
-  
-      .video__icon {
-        cursor: pointer;
-        font-size: 100px;
-        color: #000;
-      }
-    }
-  }
 }
 
 @media screen and (min-width: sizes.$screen-sm) {
@@ -53,24 +14,5 @@
 
   .content {
     box-shadow: 0px 10px 8px #AAA;
-  }
-}
-
-@media screen and (min-width: sizes.$screen-md) {
-  .content .login {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-}
-
-@media screen and (min-width: sizes.$screen-lg) {
-  .content .video .video__area {
-    padding: 50px;
-  }
-}
-
-@media screen and (min-width: sizes.$screen-xl) {
-  .content .video .video__area {
-    padding: 100px;
   }
 }

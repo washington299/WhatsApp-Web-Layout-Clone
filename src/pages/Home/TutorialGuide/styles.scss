@@ -1,0 +1,143 @@
+@use '../../../styles/core/sizes';
+@use '../../../styles/global/colors';
+
+.login {
+  display: flex;
+  flex-direction: column;
+  padding: sizes.$element-default-space-value;
+
+  .tutorial-guide {
+    display: flex;
+    flex-direction: column;
+
+    .tutorial-guide__title {
+      margin: 0;
+      font-weight: normal;
+      font-size: sizes.$big-font-size;
+    }
+
+    .tutorial-guide__list {
+      padding-inline-start: sizes.$element-default-space-value;
+    
+      .tutorial-guide__item {
+        margin-bottom: 10px;
+        list-style: decimal;
+    
+        .tutorial-guide__item--icon {
+          font-size: sizes.$big-font-size;
+          background-color: colors.$layout-tertiary-color;
+        }
+      }
+    }
+
+    .tutorial-guide__help-link {
+      display: block;
+      margin-top: sizes.$element-default-space-value;
+      font-size: sizes.$small-font-size;
+      font-weight: 600;
+      text-decoration: none;
+      color: colors.$layout-secondary-color;
+    
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .scan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+  
+    .scan__qr-code, .scan__reload-qr-code {
+      width: 260px;
+      height: 260px;
+    }
+  
+    .scan__qr-code {
+      position: absolute;
+  
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .scan__reload-qr-code {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+  
+      .scan__circle {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        height: 70%;
+        border-radius: 50%;
+        background-color: colors.$layout-primary-color;
+        color: colors.$font-secondary-color;
+        cursor: pointer;
+  
+        .scan__reload-icon {
+          margin-bottom: 10px;
+          font-size: 28px;
+        }
+        .scan__reload-text {
+          text-align: center;
+          font-size: sizes.$default-font-size;
+        }
+      }
+    }
+  
+    .reminder {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+  
+      .reminder__arrow::before {
+        content: '';
+        margin-top: 0px;
+        margin-left: -5px;
+        position: absolute;
+        border: 15px solid;
+        border-color: transparent transparent colors.$layout-quaternary-color transparent;
+      }
+  
+      .reminder__check {
+        z-index: 1;
+      }
+    }
+  
+    .reminder__msg {
+      background-color: colors.$layout-quaternary-color;
+      color: colors.$font-secondary-color;
+      border-radius: 5px;
+      padding: 10px;
+      font-weight: 600;
+      box-shadow: 0px 3px 5px #AAA;
+    }
+  }
+}
+
+@media screen and (min-width: sizes.$screen-md) {
+  .login {
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .tutorial-guide {
+      .tutorial-guide__title {
+        font-size: sizes.$large-font-size;
+        margin: sizes.$element-default-space-value 0;
+      }
+      .tutorial-guide__list .tutorial-guide__item {
+        font-size: sizes.$big-font-size;
+        margin-bottom: sizes.$element-default-space-value;
+      }
+      .tutorial-guide__help-link {
+        font-size: sizes.$default-font-size;
+      }
+    }
+  }
+}
