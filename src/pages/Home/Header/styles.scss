@@ -6,23 +6,23 @@
   @include wrapper.container;
 }
 
-header {
+.header {
   height: 90px;
   display: flex;
   align-items: center;
   color: colors.$font-secondary-color;
 
-  .logo {
+  .header__logo {
     display: flex;
     align-items: center;
     text-transform: uppercase;
     padding-left: sizes.$element-default-space-value;
     
-    svg {
+    .header__icon {
       font-size: 40px;
       margin-right: 10px;
     }
-    span {
+    .header__title {
       font-size: sizes.$default-font-size;
       font-weight: 600;
     }
@@ -30,7 +30,7 @@ header {
 }
 
 @media screen and (min-width: sizes.$screen-sm) {
-  header .logo {
+  .header .header__logo {
     padding-left: 0;
   }
 }

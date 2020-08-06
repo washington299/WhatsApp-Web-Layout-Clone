@@ -2,46 +2,46 @@
 @use '../../../styles/core/wrapper';
 @use '../../../styles/global/colors';
 
-main {
+.content {
   background-color: colors.$layout-quinary-color;
   color: colors.$font-primary-color;
-}
 
-.tutorial {
-  display: flex;
-  flex-direction: column;
-  padding: sizes.$element-default-space-value;
-}
-
-.video-area {
-  width: 100%;
-  height: auto;
-  background-color: colors.$layout-senary-color;
-
-  .video-box {
+  .login {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img, video {
-      width: 100%;
-      height: 100%;
-    }
+    flex-direction: column;
+    padding: sizes.$element-default-space-value;
   }
 
-  .play-button-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .video {
     width: 100%;
-    z-index: 1;
-    opacity: 0.5;
-    position: absolute;
-
-    svg {
-      cursor: pointer;
-      font-size: 100px;
-      color: #000;
+    height: auto;
+    background-color: colors.$layout-senary-color;
+  
+    .video__area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .video__thumb, .video__original-clip {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  
+    .video__play-button-area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      z-index: 1;
+      opacity: 0.5;
+      position: absolute;
+  
+      .video__icon {
+        cursor: pointer;
+        font-size: 100px;
+        color: #000;
+      }
     }
   }
 }
@@ -51,26 +51,26 @@ main {
     @include wrapper.container;
   }
 
-  main {
+  .content {
     box-shadow: 0px 10px 8px #AAA;
   }
 }
 
 @media screen and (min-width: sizes.$screen-md) {
-  .tutorial {
+  .content .login {
     flex-direction: row;
     justify-content: space-evenly;
   }
 }
 
 @media screen and (min-width: sizes.$screen-lg) {
-  .video-area .video-box {
+  .content .video .video__area {
     padding: 50px;
   }
 }
 
 @media screen and (min-width: sizes.$screen-xl) {
-  .video-area .video-box {
+  .content .video .video__area {
     padding: 100px;
   }
 }

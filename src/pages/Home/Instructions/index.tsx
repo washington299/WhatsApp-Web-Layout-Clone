@@ -5,30 +5,30 @@ import { FiSettings } from 'react-icons/fi';
 import './styles.scss';
 
 const Instructions: React.FC = () => (
-  <div>
-    <h2>To use WhatsApp on your computer:</h2>
-    <ul>
-      <li>Open WhatsApp on your phone.</li>
-      <li>
+  <div className="tutorial">
+    <h2 className="tutorial__title">To use WhatsApp on your computer:</h2>
+    <ul className="tutorial__list">
+      <li className="tutorial__item">Open WhatsApp on your phone.</li>
+      <li className="tutorial__item">
         Tap
         {' '}
         <b>Menu</b>
         {' '}
-        <BsThreeDotsVertical />
+        <BsThreeDotsVertical className="tutorial__item--icon" />
         {' '}
         or
         {' '}
         <b>Settings</b>
         {' '}
-        <FiSettings />
+        <FiSettings className="tutorial__item--icon" />
         {' '}
         and select
         {' '}
         <b>WhatsApp Web.</b>
       </li>
-      <li>Point your phone to this screen to capture the code.</li>
+      <li className="tutorial__item">Point your phone to this screen to capture the code.</li>
     </ul>
-    <a href="/" className="help-link">Need help to get started?</a>
+    <a href="/" className="tutorial__help-link">Need help to get started?</a>
   </div>
 );
 

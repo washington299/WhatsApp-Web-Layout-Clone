@@ -1,18 +1,18 @@
 @use '../../../styles/core/sizes';
 @use '../../../styles/global/colors';
 
-.scan-area {
+.scan {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 30px 0;
 
-  .qr_code-area, .reload-qr-code {
+  .scan__qr-code, .scan__reload-qr-code {
     width: 260px;
     height: 260px;
   }
 
-  .qr_code-area {
+  .scan__qr-code {
     position: absolute;
 
     img {
@@ -20,13 +20,13 @@
       height: 100%;
     }
   }
-  .reload-qr-code {
+  .scan__reload-qr-code {
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
 
-    .circle {
+    .scan__circle {
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -37,23 +37,23 @@
       color: colors.$font-secondary-color;
       cursor: pointer;
 
-      svg {
+      .scan__reload-icon {
         margin-bottom: 10px;
         font-size: 28px;
       }
-      span {
+      .scan__reload-text {
         text-align: center;
         font-size: sizes.$default-font-size;
       }
     }
   }
 
-  .reminder-box {
+  .reminder {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 
-    .arrow::before {
+    .reminder__arrow::before {
       content: '';
       margin-top: 0px;
       margin-left: -5px;
@@ -62,12 +62,12 @@
       border-color: transparent transparent colors.$layout-quaternary-color transparent;
     }
 
-    input {
+    .reminder__check {
       z-index: 1;
     }
   }
 
-  .info-msg {
+  .reminder__msg {
     background-color: colors.$layout-quaternary-color;
     color: colors.$font-secondary-color;
     border-radius: 5px;

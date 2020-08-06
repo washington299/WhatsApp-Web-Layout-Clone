@@ -12,17 +12,17 @@ const MainContent: React.FC = () => {
 
   return (
     <div className="container">
-      <main>
-        <section className="tutorial">
+      <main className="content">
+        <section className="login">
           <Instructions />
           <ScanArea />
         </section>
-        <section className="video-area">
-          <div className="video-box">
+        <section className="video">
+          <div className="video__area">
             {!displayVideo && (
-              <div className="play-button-area">
-                <div className="play-button" onClick={() => setDisplayVideo(true)}>
-                  <GoPlay />
+              <div className="video__play-button-area">
+                <div className="video__play-button" onClick={() => setDisplayVideo(true)}>
+                  <GoPlay className="video__icon" />
                 </div>
               </div>
             )}
@@ -30,10 +30,11 @@ const MainContent: React.FC = () => {
               src="assets/images/video-thumbnail.jpg"
               alt="WhatsApp video thumbnail"
               crossOrigin="anonymous"
+              className="video__thumb"
               style={displayVideo ? { display: 'none' } : { display: 'block' }}
             />
             {displayVideo && (
-              <video autoPlay controls controlsList="nodownload">
+              <video autoPlay controls controlsList="nodownload" className="video__original-clip">
                 <track kind="captions" />
                 <source src="https://web.whatsapp.com/whatsapp-webclient-login_a0f99e8cbba9eaa747ec23ffb30d63fe.mp4" />
               </video>

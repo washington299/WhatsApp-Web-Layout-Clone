@@ -27,31 +27,32 @@ const ScanArea: React.FC = () => {
   }
 
   return (
-    <section className="scan-area">
-      <div className="qr_code-area" style={validQrCode ? { opacity: 1 } : { opacity: 0.05 }}>
-        <QrCode size={250} value="https://portfolio.washingtoncampos9.now.sh" />
+    <section className="scan">
+      <div className="scan__qr-code" style={validQrCode ? { opacity: 1 } : { opacity: 0.05 }}>
+        <QrCode size={250} value="http://192.168.0.105:3000/chat" />
       </div>
-      <div className="reload-qr-code">
+      <div className="scan__reload-qr-code">
         <div
-          className="circle"
+          className="scan__circle"
           style={validQrCode ? { display: 'none' } : { display: 'flex' }}
           onClick={handleClick}
         >
-          <BsArrowClockwise />
-          <span>CLICK TO RELOAD QR CODE</span>
+          <BsArrowClockwise className="scan__reload-icon" />
+          <span className="scan__reload-text">CLICK TO RELOAD QR CODE</span>
         </div>
       </div>
-      <div className="reminder-box">
-        <span className="arrow" style={isChecked ? { display: 'none' } : { display: 'block' }} />
+      <div className="reminder">
+        <span className="reminder__arrow" style={isChecked ? { display: 'none' } : { display: 'block' }} />
         <input
           type="checkbox"
           onChange={() => setIsChecked(!isChecked)}
           checked={isChecked}
+          className="reminder__check"
         />
         <span>Keep me signed in</span>
       </div>
       {!isChecked && (
-        <div className="info-msg">You&apos;ll be logged out after several minutes of inativity</div>
+        <div className="reminder__msg">You&apos;ll be logged out after several minutes of inativity</div>
       )}
     </section>
   );

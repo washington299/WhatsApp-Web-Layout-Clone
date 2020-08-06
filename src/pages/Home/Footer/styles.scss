@@ -1,7 +1,7 @@
 @use '../../../styles/core/sizes';
 @use '../../../styles/global/colors';
 
-footer {
+.footer {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -10,7 +10,7 @@ footer {
   color: colors.$font-secondary-color;
   background-color: colors.$layout-primary-color;
 
-  .made-by {
+  .footer__link {
     margin-left: 5px;
     font-weight: bold;
     color: colors.$font-secondary-color;
@@ -23,7 +23,7 @@ footer {
 }
 
 @media screen and (min-width: sizes.$screen-sm) {
-  footer {
+  .footer {
     margin-top: 50px;
   }
 }
