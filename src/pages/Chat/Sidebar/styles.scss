@@ -1,5 +1,30 @@
+@use '../../../styles/core/sizes';
+
 .sidebar {
-  flex: 0.35;
+  flex: 1;
   color: #000;
   border: 1px solid #000;
+
+  .sidebar__header {
+    height: 10vh;
+    border: 1px solid #F00;
+  }
+  .sidebar__notification {
+    height: 13vh;
+    border: 1px solid #F00;
+  }
+  .sidebar__search {
+    height: 8vh;
+    border: 1px solid #F00;
+  }
+  .sidebar__contacts {
+    height: auto;
+    border: 1px solid #F00;
+  }
+}
+
+@media screen and (min-width: sizes.$screen-sm) {
+  .sidebar {
+    flex: 0.35;
+  }
 }
