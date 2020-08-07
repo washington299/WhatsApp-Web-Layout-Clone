@@ -1,4 +1,5 @@
 @use '../../../styles/core/sizes';
+@use '../../../styles/global/colors';
 
 .sidebar {
   flex: 1;
@@ -7,7 +8,27 @@
 
   .sidebar__header {
     height: 10vh;
-    border: 1px solid #F00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color: colors.$sidebar-header-background-color;
+
+    .sidebar__profile-picture {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .sidebar__options {
+      display: flex;
+      align-items: center;
+
+      .options__item {
+        font-size: 22px;
+        padding: 0 10px;
+        color: colors.$sidebar-header-icons-color;
+      }
+    }
   }
   .sidebar__notification {
     height: 13vh;
