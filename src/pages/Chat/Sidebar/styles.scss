@@ -32,7 +32,36 @@
   }
   .sidebar__notification {
     height: 13vh;
-    border: 1px solid #F00;
+    display: flex;
+    align-items: center;
+    background-color: colors.$notification-reminder-color;
+
+    .notification__circle {
+      margin: 0 15px;
+      padding: 8px 10px;
+      background-color: colors.$layout-quinary-color;
+      border-radius: 50%;
+
+      .notification__icon {
+        font-size: sizes.$extra-big-font-size;
+        color: colors.$notification-reminder-color;
+      }
+    }
+
+    .notification__texts {
+      .notification__title {
+        font-size: sizes.$small-font-size;
+      }
+      .notification__button {
+        display: block;
+        font-size: sizes.$extra-small-font-size;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
   .sidebar__search {
     height: 8vh;
