@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  MdDonutLarge, MdChat, MdMoreVert, MdNotificationsOff,
+  MdDonutLarge, MdChat, MdMoreVert, MdNotificationsOff, MdSearch,
 } from 'react-icons/md';
 
 import './styles.scss';
@@ -33,7 +33,13 @@ const Sidebar: React.FC = () => (
       </div>
     </div>
 
-    <div className="sidebar__search">Search</div>
+    <div className="sidebar__search">
+      <div className="search__area">
+        <MdSearch className="search__icon" />
+        <input type="text" className="search__field" placeholder="Search or start new chat" />
+      </div>
+    </div>
+
     <div className="sidebar__contacts">Contact</div>
   </aside>
 );

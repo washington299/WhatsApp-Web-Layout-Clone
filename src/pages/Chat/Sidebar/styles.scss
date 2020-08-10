@@ -6,6 +6,7 @@
   color: #000;
   border: 1px solid #000;
 
+
   .sidebar__header {
     height: 10vh;
     display: flex;
@@ -30,6 +31,8 @@
       }
     }
   }
+
+
   .sidebar__notification {
     height: 13vh;
     display: flex;
@@ -63,10 +66,42 @@
       }
     }
   }
+
+
   .sidebar__search {
     height: 8vh;
-    border: 1px solid #F00;
+    display: flex;
+    align-items: center;
+    background-color: colors.$search-background-color;
+
+    .search__area {
+      width: 100%;
+      height: calc(100% - 20px);
+      display: flex;
+      align-items: center;
+      margin: 0 20px;
+      background-color: colors.$layout-quinary-color;
+      border: 0.5px solid colors.$sidebar-header-background-color;
+      border-radius: 30px;
+
+      .search__icon {
+        margin: 5px 10px;
+        color: colors.$sidebar-header-icons-color;
+        font-size: sizes.$extra-big-font-size;
+        cursor: pointer;
+      }
+      .search__field {
+        width: calc(100% - 60px);
+        height: calc(100% - 15px);
+        padding: 5px;
+        font-size: sizes.$small-font-size;
+        border: none;
+        outline: none;
+      }
+    }
   }
+
+
   .sidebar__contacts {
     height: auto;
     border: 1px solid #F00;
