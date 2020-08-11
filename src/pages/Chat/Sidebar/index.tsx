@@ -8,6 +8,8 @@ import {
   MdSearch,
 } from 'react-icons/md';
 
+import Contact from '../../../components/Contact';
+
 import './styles.scss';
 
 const Sidebar: React.FC = () => {
@@ -57,7 +59,16 @@ const Sidebar: React.FC = () => {
         </div>
       </div>
 
-      <div className="sidebar__contacts">Contact</div>
+      <div className="sidebar__contacts">
+        <Contact />
+        <Contact />
+        <Contact />
+        <Contact />
+        <Contact />
+        <Contact />
+        <Contact />
+        <Contact />
+      </div>
     </aside>
   );
 };

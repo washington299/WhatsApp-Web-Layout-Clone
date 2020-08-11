@@ -34,7 +34,7 @@
 
 
   .sidebar__notification {
-    height: 13vh;
+    height: 12vh;
     display: flex;
     align-items: center;
     background-color: colors.$notification-reminder-color;
@@ -103,12 +103,14 @@
 
 
   .sidebar__contacts {
-    height: auto;
-    border: 1px solid #F00;
+    min-width: 340px;
+    height: 70vh;
+    background-color: colors.$layout-quinary-color;
+    overflow-y: auto;
   }
 }
 
-@media screen and (min-width: sizes.$screen-sm) {
+@media screen and (min-width: sizes.$screen-md) {
   .sidebar {
     flex: 0.35;
   }
