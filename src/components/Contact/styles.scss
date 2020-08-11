@@ -1,0 +1,62 @@
+@use '../../styles/global/colors';
+@use '../../styles/core/sizes';
+
+.contacts__container {
+  min-height: 70px;
+  max-height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 0.5px solid colors.$sidebar-header-background-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: colors.$contact-background-color;
+  }
+
+  .contacts__img {
+    width: 45px;
+    height: 45px;
+    margin-right: 5px;
+  }
+  .contacts__texts {
+    flex: 1;
+    margin-right: 5px;
+
+    .texts__name {
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+      font-size: 15px;
+    }
+    .texts__lastMessage {
+      font-size: sizes.$small-font-size;
+      color: #9D9D9D;
+    }
+  }
+  
+  .contacts__details {
+    .details__time {
+      display: block;
+      font-size: sizes.$small-font-size;
+      color: colors.$contact-icons-color;
+      margin-bottom: 3px;
+      text-align: end;
+    }
+    .details__icon {
+      vertical-align: middle;
+      color: colors.$contact-icons-color;
+      font-size: sizes.$extra-big-font-size;
+    }
+    .details__unreadMessage {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 10px;
+      background-color: colors.$message-notification-color;
+      color: colors.$font-secondary-color;
+      font-size: sizes.$small-font-size;
+      font-weight: 600;
+    }
+  }
+}
