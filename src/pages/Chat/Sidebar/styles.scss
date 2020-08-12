@@ -1,4 +1,5 @@
 @use '../../../styles/core/sizes';
+@use '../../../styles/core/wrapper';
 @use '../../../styles/global/colors';
 
 .sidebar {
@@ -8,10 +9,9 @@
 
 
   .sidebar__header {
+    @include wrapper.align-center;
     height: 10vh;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: sizes.$sidebar-container-size;
     background-color: colors.$sidebar-header-background-color;
 
@@ -21,8 +21,7 @@
       border-radius: 50%;
     }
     .sidebar__options {
-      display: flex;
-      align-items: center;
+      @include wrapper.align-center;
 
       .options__item {
         font-size: 22px;
@@ -34,9 +33,8 @@
 
 
   .sidebar__notification {
+    @include wrapper.align-center;
     height: 12vh;
-    display: flex;
-    align-items: center;
     padding: sizes.$sidebar-container-size;
     background-color: colors.$notification-reminder-color;
 
@@ -70,17 +68,15 @@
 
 
   .sidebar__search {
+    @include wrapper.align-center;
     height: 8vh;
-    display: flex;
-    align-items: center;
     padding: sizes.$sidebar-container-size;
     background-color: colors.$search-background-color;
 
     .search__area {
+      @include wrapper.align-center;
       width: 100%;
       height: calc(100% - 20px);
-      display: flex;
-      align-items: center;
       background-color: colors.$layout-quinary-color;
       border: 0.5px solid colors.$sidebar-header-background-color;
       border-radius: 30px;
