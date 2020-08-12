@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    padding: sizes.$sidebar-container-size;
     background-color: colors.$sidebar-header-background-color;
 
     .sidebar__profile-picture {
@@ -26,7 +26,7 @@
 
       .options__item {
         font-size: 22px;
-        padding: 0 10px;
+        padding: sizes.$sidebar-container-size;
         color: colors.$sidebar-header-icons-color;
       }
     }
@@ -37,13 +37,14 @@
     height: 12vh;
     display: flex;
     align-items: center;
+    padding: sizes.$sidebar-container-size;
     background-color: colors.$notification-reminder-color;
 
     .notification__circle {
-      margin: 0 15px;
+      margin-right: 10px;
       padding: 8px 10px;
-      background-color: colors.$layout-quinary-color;
       border-radius: 50%;
+      background-color: colors.$layout-quinary-color;
 
       .notification__icon {
         font-size: sizes.$extra-big-font-size;
@@ -57,8 +58,8 @@
       }
       .notification__button {
         display: block;
-        font-size: sizes.$extra-small-font-size;
         cursor: pointer;
+        font-size: sizes.$extra-small-font-size;
 
         &:hover {
           text-decoration: underline;
@@ -72,6 +73,7 @@
     height: 8vh;
     display: flex;
     align-items: center;
+    padding: sizes.$sidebar-container-size;
     background-color: colors.$search-background-color;
 
     .search__area {
@@ -79,7 +81,6 @@
       height: calc(100% - 20px);
       display: flex;
       align-items: center;
-      margin: 0 20px;
       background-color: colors.$layout-quinary-color;
       border: 0.5px solid colors.$sidebar-header-background-color;
       border-radius: 30px;
