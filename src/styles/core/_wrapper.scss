@@ -8,3 +8,8 @@
     padding: 0 10%;
   }
 }
+
+@mixin align-center {
+  display: flex;
+  align-items: center;
+}
