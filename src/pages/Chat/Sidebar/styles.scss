@@ -10,10 +10,10 @@
 
   .sidebar__header {
     @include wrapper.align-center;
-    height: 10vh;
     justify-content: space-between;
+    height: 10vh;
     padding: sizes.$sidebar-container-size;
-    background-color: colors.$sidebar-header-background-color;
+    background-color: colors.$chat-header-background-color;
 
     .sidebar__profile-picture {
       width: 40px;
@@ -78,7 +78,7 @@
       width: 100%;
       height: calc(100% - 20px);
       background-color: colors.$layout-quinary-color;
-      border: 0.5px solid colors.$sidebar-header-background-color;
+      border: 0.5px solid colors.$chat-header-background-color;
       border-radius: 30px;
 
       .search__icon {
