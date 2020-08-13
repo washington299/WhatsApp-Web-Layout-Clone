@@ -7,6 +7,7 @@ import {
   MdNotificationsActive,
   MdSearch,
 } from 'react-icons/md';
+import { Contacts } from '../../../utils/data';
 
 import Contact from '../../../components/Contact';
 
@@ -60,14 +61,19 @@ const Sidebar: React.FC = () => {
       </div>
 
       <div className="sidebar__contacts">
-        <Contact />
-        <Contact />
-        <Contact />
-        <Contact />
-        <Contact />
-        <Contact />
-        <Contact />
-        <Contact />
+        {Contacts.map(({
+          name, avatar, lastMessage, timeLastMessage, pinned, mute, unreadMessages,
+        }) => (
+          <Contact
+            name={name}
+            avatar={avatar}
+            lastMessage={lastMessage}
+            timeLastMessage={timeLastMessage}
+            pinned={pinned}
+            mute={mute}
+            unreadMessages={unreadMessages}
+          />
+        ))}
       </div>
     </aside>
   );
