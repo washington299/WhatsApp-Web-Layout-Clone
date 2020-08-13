@@ -13,6 +13,10 @@
 
   &:hover {
     background-color: colors.$contact-background-color;
+
+    .contacts__details .options {
+      display: inline;
+    }
   }
 
   .contacts__img {
@@ -37,21 +41,26 @@
   }
   
   .contacts__details {
+    text-align: end;
+
     .details__time {
       display: block;
       font-size: sizes.$small-font-size;
       color: colors.$contact-icons-color;
       margin-bottom: 3px;
-      text-align: end;
     }
     .details__icon {
       vertical-align: middle;
       color: colors.$contact-icons-color;
       font-size: sizes.$extra-big-font-size;
     }
+    .options {
+      display: none;
+    }
     .details__unreadMessage {
       display: inline-block;
       padding: 3px 10px;
+      margin: 0 3px;
       border-radius: 10px;
       background-color: colors.$message-notification-color;
       color: colors.$font-secondary-color;
