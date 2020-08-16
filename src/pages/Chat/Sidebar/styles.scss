@@ -5,8 +5,6 @@
 .sidebar {
   flex: 1;
   color: #000;
-  border: 1px solid #000;
-
 
   .sidebar__header {
     @include wrapper.align-center;
