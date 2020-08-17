@@ -3,6 +3,7 @@ export interface IContacts {
   avatar: string;
   lastMessage: string;
   timeLastMessage: string;
+  lastSeen: string;
   pinned?: boolean;
   mute?: boolean;
   unreadMessages?: number;
