@@ -25,6 +25,7 @@ This is a Responsive Whatsapp Web Clone, this project was made to improve my Ski
 - Colorize
 - VolumeOff
 - ExpandMore
+- Computer
 - Attachment
 - InsertEmoticon
 - Mic
