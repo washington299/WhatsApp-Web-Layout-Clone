@@ -1,9 +1,44 @@
 @use '../../../styles/core/sizes';
+@use '../../../styles/global/colors';
 
 .body {
   flex: 0;
   display: none;
   color: #000;
+  background-color: #F8F9FB;
+
+  .body__screen {
+    max-width: 500px;
+    margin: 15vh auto;
+    align-items: center;
+    text-align: center;
+    color: colors.$font-tertiary-color;
+
+    .body__initial-img {
+      width: 250px;
+    }
+    .body__initial-title {
+      margin: 0;
+      font-weight: normal;
+      font-size: sizes.$large-font-size;
+      color: colors.$font-primary-color;
+    }
+    .body__initial-icon {
+      vertical-align: middle;
+      font-size: sizes.$large-font-size;
+      margin-right: 5px;
+    }
+    .body__initial-windows-link {
+      color: colors.$message-notification-color;
+      font-weight: 600;
+      text-decoration: none;
+      margin-left: 5px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 
   .body__header {
     height: 10vh;
