@@ -3,19 +3,34 @@ import { MdColorize, MdVolumeOff, MdExpandMore } from 'react-icons/md';
 
 import { IContacts } from '../../interface';
 import { useChatScreenDispatch } from '../../contexts/chat-screen';
+import { useContactsDispatch } from '../../contexts/contacts';
 
 import './styles.scss';
 
 type Props = IContacts;
 
 const Contact: React.FC<Props> = ({
-  name, avatar, lastMessage, timeLastMessage, pinned, mute, unreadMessages,
+  name, avatar, lastMessage, timeLastMessage, lastSeen, pinned, mute, unreadMessages,
 }) => {
   const [hidden, setHidden] = useState<boolean>(!!unreadMessages);
-  const dispatch = useChatScreenDispatch();
+  const dispatchUnreadMessages = useChatScreenDispatch();
+  const dispatchContactsData = useContactsDispatch();
 
   function handleClick() {
-    dispatch({
+    dispatchContactsData({
+      type: 'SET_CONTACTS_DATA',
+      payload: {
+        name,
+        avatar,
+        lastMessage,
+        timeLastMessage,
+        lastSeen,
+        pinned,
+        mute,
+        unreadMessages,
+      },
+    });
+    dispatchUnreadMessages({
       type: 'DISPLAY',
     });
     setHidden(false);

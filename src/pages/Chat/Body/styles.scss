@@ -1,5 +1,6 @@
 @use '../../../styles/core/sizes';
 @use '../../../styles/global/colors';
+@use '../../../styles/core/wrapper';
 
 .body {
   flex: 0;
@@ -41,8 +42,26 @@
   }
 
   .body__header {
+    @include wrapper.align-center;
+    justify-content: space-between;
     height: 10vh;
-    border: 1px solid #F00;
+    padding: sizes.$sidebar-container-size;
+    background-color: colors.$chat-header-background-color;
+
+    .body__profile-picture {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .body__options {
+      @include wrapper.align-center;
+
+      .body__item {
+        font-size: 22px;
+        padding: sizes.$sidebar-container-size;
+        color: colors.$sidebar-header-icons-color;
+      }
+    }
   }
   .body__messages {
     height: 80vh;
