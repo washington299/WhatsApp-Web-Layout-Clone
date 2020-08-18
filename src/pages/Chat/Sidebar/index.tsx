@@ -11,13 +11,16 @@ import { Contacts } from '../../../utils/data';
 
 import Contact from '../../../components/Contact';
 
+import { useChatScreenState } from '../../../contexts/chat-screen';
+
 import './styles.scss';
 
 const Sidebar: React.FC = () => {
   const [notificationActive, setNotificationActive] = useState<boolean>(false);
+  const { display } = useChatScreenState();
 
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${display ? 'sidebar--hidden' : ''}`}>
       <header className="sidebar__header">
         <img
           src="./assets/images/avatar/avatar-man-1.png"
@@ -65,6 +68,7 @@ const Sidebar: React.FC = () => {
           name, avatar, lastMessage, timeLastMessage, lastSeen, pinned, mute, unreadMessages,
         }) => (
           <Contact
+            key={name}
             name={name}
             avatar={avatar}
             lastMessage={lastMessage}

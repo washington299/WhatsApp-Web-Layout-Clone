@@ -2,6 +2,10 @@
 @use '../../../styles/core/wrapper';
 @use '../../../styles/global/colors';
 
+.sidebar--hidden {
+  display: none;
+}
+
 .sidebar {
   flex: 1;
   color: #000;
@@ -109,5 +113,8 @@
 @media screen and (min-width: sizes.$screen-md) {
   .sidebar {
     flex: 0.35;
+  }
+  .sidebar--hidden {
+    display: block;
   }
 }

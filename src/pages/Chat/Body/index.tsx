@@ -13,7 +13,7 @@ const Body: React.FC = () => {
   const { avatar, name, lastSeen } = useContactsState();
 
   return (
-    <section className="body">
+    <section className="body" style={display ? { flex: 1, display: 'block' } : {}}>
       {display && (
         <div className="body__chat">
           <header className="body__header">
