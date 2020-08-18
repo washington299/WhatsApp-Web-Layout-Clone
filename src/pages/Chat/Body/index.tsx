@@ -19,8 +19,10 @@ const Body: React.FC = () => {
           <header className="body__header">
             <div className="body__info">
               <img src={avatar} alt={name} className="body__profile-picture" />
-              <h2 className="body__name">{name}</h2>
-              <span className="body__lastSeen">{lastSeen}</span>
+              <div className="body__texts">
+                <h2 className="body__name">{name}</h2>
+                <span className="body__lastSeen">{`last seen today ${lastSeen}`}</span>
+              </div>
             </div>
             <div className="body__options">
               <MdSearch className="body__item" />

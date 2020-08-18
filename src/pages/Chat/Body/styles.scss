@@ -48,28 +48,42 @@
     padding: sizes.$sidebar-container-size;
     background-color: colors.$chat-header-background-color;
 
+    .body__info {
+      @include wrapper.align-center;
+    }
     .body__profile-picture {
       width: 40px;
       height: 40px;
       border-radius: 50%;
+      margin-right: 5px;
+    }
+    .body__name {
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+      font-size: 15px;
+    }
+    .body__texts .body__lastSeen {
+      font-size: 14px;
     }
     .body__options {
       @include wrapper.align-center;
 
       .body__item {
-        font-size: 22px;
+        font-size: 26px;
         padding: sizes.$sidebar-container-size;
         color: colors.$sidebar-header-icons-color;
+        cursor: pointer;
       }
     }
   }
   .body__messages {
     height: 80vh;
-    border: 1px solid #F00;
+    background-color: red;
   }
   .body__text-area {
     height: 10vh;
-    border: 1px solid #F00;
+    background-color: green;
   }
 }
 
