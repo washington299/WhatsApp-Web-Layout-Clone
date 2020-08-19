@@ -1,16 +1,23 @@
 import React from 'react';
 import {
-  MdComputer, MdSearch, MdAttachment, MdMoreVert,
+  MdComputer, MdSearch, MdAttachment, MdMoreVert, MdChevronLeft,
 } from 'react-icons/md';
 
-import { useChatScreenState } from '../../../contexts/chat-screen';
+import { useChatScreenState, useChatScreenDispatch } from '../../../contexts/chat-screen';
 import { useContactsState } from '../../../contexts/contacts';
 
 import './styles.scss';
 
 const Body: React.FC = () => {
   const { display } = useChatScreenState();
+  const dispatch = useChatScreenDispatch();
   const { avatar, name, lastSeen } = useContactsState();
+
+  function handleClick() {
+    dispatch({
+      type: 'NOT_DISPLAY',
+    });
+  }
 
   return (
     <section className="body" style={display ? { flex: 1, display: 'block' } : {}}>
@@ -18,6 +25,7 @@ const Body: React.FC = () => {
         <div className="body__chat">
           <header className="body__header">
             <div className="body__info">
+              <MdChevronLeft className="body__arrow-back" onClick={handleClick} />
               <img src={avatar} alt={name} className="body__profile-picture" />
               <div className="body__texts">
                 <h2 className="body__name">{name}</h2>
