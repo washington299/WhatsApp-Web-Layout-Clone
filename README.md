@@ -1,6 +1,6 @@
 <h1 align="center">Whatsapp Web Clone</h1>
 
-This is a Responsive Whatsapp Web Clone, this project was made to improve my Skills and habilities with React Framework.
+This is a Responsive Whatsapp Web Clone, this project was made to improve my Skills and habilities with CSS BEM architecture, SASS, React, Typescript and Context API.
 
 ## Techs
 
