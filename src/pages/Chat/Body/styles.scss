@@ -82,13 +82,32 @@
       }
     }
   }
+
   .body__messages {
     height: 80vh;
-    background-color: red;
+    background-color: #000;
   }
   .body__text-area {
+    @include wrapper.align-center;
+    justify-content: space-between;
     height: 10vh;
-    background-color: green;
+    background-color: colors.$search-background-color;
+
+    .body__item {
+      font-size: 26px;
+      padding: 0 10px;
+      color: colors.$sidebar-header-icons-color;
+      cursor: pointer;
+    }
+
+    .body__field {
+      flex: 1;
+      padding: 15px;
+      font-size: sizes.$small-font-size;
+      border: 0.5px solid colors.$chat-header-background-color;
+      border-radius: 5vh;
+      outline: none;
+    }
   }
 }
 
