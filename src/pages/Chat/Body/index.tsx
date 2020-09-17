@@ -1,6 +1,12 @@
 import React from 'react';
 import {
-  MdComputer, MdSearch, MdAttachment, MdMoreVert, MdChevronLeft, MdInsertEmoticon, MdMic,
+  MdComputer,
+  MdSearch,
+  MdAttachment,
+  MdMoreVert,
+  MdChevronLeft,
+  MdInsertEmoticon,
+  MdMic,
 } from 'react-icons/md';
 
 import { useChatScreenState, useChatScreenDispatch } from '../../../contexts/chat-screen';
@@ -39,7 +45,16 @@ const Body: React.FC = () => {
             </div>
           </header>
 
-          <section className="body__messages">Body messages</section>
+          <section className="body__messages">
+            <div className="body__wallpaper">
+              <div className="body__contact--message-line">
+                <div className="body__contact--message-item">
+                  <div className="body__contact--message-text">Olá, tudo bem com você?</div>
+                  <div className="body__contact--message-date">19:50</div>
+                </div>
+              </div>
+            </div>
+          </section>
 
           <div className="body__text-area">
             <MdInsertEmoticon className="body__item" />

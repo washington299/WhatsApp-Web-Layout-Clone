@@ -9,7 +9,7 @@
 .sidebar {
   flex: 1;
   color: #000;
-  border-right: 1px solid #AAA;
+  border-right: 0.5px solid #ccc;
 
   .sidebar__header {
     @include wrapper.align-center;

@@ -46,6 +46,7 @@
     height: 10vh;
     padding: sizes.$sidebar-container-size;
     background-color: colors.$chat-header-background-color;
+    border-bottom: sizes.$element-border solid #ccc;
 
     .body__info {
       @include wrapper.align-center;
@@ -83,15 +84,21 @@
     }
   }
 
-  .body__messages {
-    height: 80vh;
-    background-color: #000;
+  .body__wallpaper {
+    height: calc(80vh - 1vh);
+    overflow-y: auto;
+    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+    background-size: cover;
+    background-position: center;
   }
+
+
   .body__text-area {
     @include wrapper.align-center;
     justify-content: space-between;
     height: 10vh;
     background-color: colors.$search-background-color;
+    border-top: sizes.$element-border solid #ccc;
 
     .body__item {
       font-size: 26px;

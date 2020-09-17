@@ -10,16 +10,6 @@ const Chat: React.FC = () => (
     <Sidebar />
     <Body />
   </div>
-  //  Sidebar
-  //    header
-  //    remind notification
-  //    search messages
-  //    contacts area
-  //      contact chat
-  //  Body
-  //    header
-  //    messages area
-  //    text area
 );
 
 export default Chat;
