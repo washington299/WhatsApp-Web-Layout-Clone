@@ -20,7 +20,7 @@ const Sidebar: React.FC = () => {
   const { display } = useChatScreenState();
 
   return (
-    <aside className={`sidebar ${display ? 'sidebar--hidden' : ''}`}>
+    <aside className="sidebar" style={display && window.innerWidth < 768 ? { display: 'none' } : { display: 'flex' }}>
       <header className="sidebar__header">
         <img
           src="./assets/images/avatar/avatar-man-1.png"

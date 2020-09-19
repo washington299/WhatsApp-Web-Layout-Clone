@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   MdComputer,
   MdSearch,
@@ -12,6 +12,8 @@ import {
 import { useChatScreenState, useChatScreenDispatch } from '../../../contexts/chat-screen';
 import { useContactsState } from '../../../contexts/contacts';
 
+import MessageBox from '../../../components/MessageBox';
+
 import './styles.scss';
 
 const Body: React.FC = () => {
@@ -19,14 +21,17 @@ const Body: React.FC = () => {
   const dispatch = useChatScreenDispatch();
   const { avatar, name, lastSeen } = useContactsState();
 
+  const [listOfMessages, setListOfMessages] = useState([{}, {}, {}]);
+
   function handleClick() {
+    setListOfMessages([{}, {}, {}]);
     dispatch({
       type: 'NOT_DISPLAY',
     });
   }
 
   return (
-    <section className="body" style={display ? { flex: 1, display: 'block' } : {}}>
+    <>
       {display && (
         <div className="body__chat">
           <header className="body__header">
@@ -45,15 +50,10 @@ const Body: React.FC = () => {
             </div>
           </header>
 
-          <section className="body__messages">
-            <div className="body__wallpaper">
-              <div className="body__contact--message-line">
-                <div className="body__contact--message-item">
-                  <div className="body__contact--message-text">Olá, tudo bem com você?</div>
-                  <div className="body__contact--message-date">19:50</div>
-                </div>
-              </div>
-            </div>
+          <section className="body__wallpaper">
+            {listOfMessages.map(() => (
+              <MessageBox />
+            ))}
           </section>
 
           <div className="body__text-area">
@@ -64,26 +64,28 @@ const Body: React.FC = () => {
         </div>
       )}
       {!display && (
-        <div className="body__screen">
-          <img
-            src="assets/images/whatsapp-initial-connection.jpg"
-            alt="Whatsapp connection"
-            className="body__initial-img"
-          />
-          <h1 className="body__initial-title">Keep your phone connected</h1>
-          <p className="body__initial-text">
-            WhatsApp connects to your phone to sync message. To reduce data usage, connect your
-            phone to Wi-Fi.
-          </p>
-          <hr />
-          <MdComputer className="body__initial-icon" />
-          <span className="body__initial-span">
-            WhatsApp is available for Windows.
-            <a href="/" className="body__initial-windows-link">Get it here.</a>
-          </span>
-        </div>
+        <section className="body" style={display ? { flex: 1, display: 'block' } : {}}>
+          <div className="body__screen">
+            <img
+              src="assets/images/whatsapp-initial-connection.jpg"
+              alt="Whatsapp connection"
+              className="body__initial-img"
+            />
+            <h1 className="body__initial-title">Keep your phone connected</h1>
+            <p className="body__initial-text">
+              WhatsApp connects to your phone to sync message. To reduce data usage, connect your
+              phone to Wi-Fi.
+            </p>
+            <hr />
+            <MdComputer className="body__initial-icon" />
+            <span className="body__initial-span">
+              WhatsApp is available for Windows.
+              <a href="/" className="body__initial-windows-link">Get it here.</a>
+            </span>
+          </div>
+        </section>
       )}
-    </section>
+    </>
   );
 };
 

@@ -2,19 +2,16 @@
 @use '../../../styles/core/wrapper';
 @use '../../../styles/global/colors';
 
-.sidebar--hidden {
-  display: none;
-}
-
 .sidebar {
   flex: 1;
+  flex-direction: column;
   color: #000;
   border-right: 0.5px solid #ccc;
 
   .sidebar__header {
     @include wrapper.align-center;
     justify-content: space-between;
-    height: 10vh;
+    height: 60px;
     padding: sizes.$sidebar-container-size;
     background-color: colors.$chat-header-background-color;
 
@@ -37,7 +34,7 @@
 
   .sidebar__notification {
     @include wrapper.align-center;
-    height: 12vh;
+    height: 70px;
     padding: sizes.$sidebar-container-size;
     background-color: colors.$notification-reminder-color;
 
@@ -72,7 +69,7 @@
 
   .sidebar__search {
     @include wrapper.align-center;
-    height: 8vh;
+    height: 50px;
     padding: sizes.$sidebar-container-size;
     background-color: colors.$search-background-color;
 
@@ -104,7 +101,7 @@
 
   .sidebar__contacts {
     min-width: 340px;
-    height: 70vh;
+    flex: 1;
     background-color: colors.$layout-quinary-color;
     overflow-y: auto;
   }
@@ -113,8 +110,5 @@
 @media screen and (min-width: sizes.$screen-md) {
   .sidebar {
     flex: 0.35;
-  }
-  .sidebar--hidden {
-    display: block;
   }
 }
