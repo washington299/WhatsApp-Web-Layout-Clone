@@ -13,7 +13,7 @@ const Contact: React.FC<Props> = ({
   name, avatar, lastMessage, timeLastMessage, lastSeen, pinned, mute, unreadMessages,
 }) => {
   const [hidden, setHidden] = useState<boolean>(!!unreadMessages);
-  const dispatchUnreadMessages = useChatScreenDispatch();
+  const dispatchChatScreen = useChatScreenDispatch();
   const dispatchContactsData = useContactsDispatch();
 
   function handleClick() {
@@ -30,7 +30,7 @@ const Contact: React.FC<Props> = ({
         unreadMessages,
       },
     });
-    dispatchUnreadMessages({
+    dispatchChatScreen({
       type: 'DISPLAY',
     });
     setHidden(false);
