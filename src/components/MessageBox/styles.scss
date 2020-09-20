@@ -1,0 +1,28 @@
+@use '../../styles/global/colors';
+@use '../../styles//core/sizes';
+
+.message {
+	display: flex;
+	margin-bottom: 10px;
+
+	.message__item {
+		max-width: 70%;
+		display: flex;
+		flex-direction: column;
+		background-color: colors.$layout-quinary-color;
+		border-radius: 10px;
+		box-shadow: 0 1px 1px #CCC;
+		padding: 3px;
+	}
+	.message__text {
+		font-size: sizes.$small-font-size;
+		margin: 5px 40px 5px 5px;
+	}
+	.message__date {
+		font-size: sizes.$extra-small-font-size;
+		color: colors.$font-tertiary-color;
+		margin-top: -15px;
+		margin-right: 5px;
+		text-align: right;
+	}
+}
