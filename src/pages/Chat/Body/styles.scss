@@ -98,6 +98,13 @@
     background-position: center;
     padding: 20px 30px;
   }
+  .body__wallpaper::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .body__wallpaper::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 
 
   .body__text-area {

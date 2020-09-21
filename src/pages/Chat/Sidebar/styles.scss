@@ -105,6 +105,13 @@
     background-color: colors.$layout-quinary-color;
     overflow-y: auto;
   }
+  .sidebar__contacts::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .sidebar__contacts::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 }
 
 @media screen and (min-width: sizes.$screen-md) {
