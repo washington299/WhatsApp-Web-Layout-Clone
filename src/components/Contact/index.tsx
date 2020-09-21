@@ -10,7 +10,7 @@ import './styles.scss';
 type Props = IContacts;
 
 const Contact: React.FC<Props> = ({
-  name, avatar, lastMessage, timeLastMessage, lastSeen, pinned, mute, unreadMessages,
+  id, name, avatar, lastMessage, timeLastMessage, lastSeen, pinned, mute, unreadMessages,
 }) => {
   const [hidden, setHidden] = useState<boolean>(!!unreadMessages);
   const dispatchChatScreen = useChatScreenDispatch();
@@ -20,6 +20,7 @@ const Contact: React.FC<Props> = ({
     dispatchContactsData({
       type: 'SET_CONTACTS_DATA',
       payload: {
+        id,
         name,
         avatar,
         lastMessage,

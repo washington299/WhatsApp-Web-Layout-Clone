@@ -5,6 +5,7 @@ import React, {
 import { IContacts } from '../interface';
 
 const initialData = {
+  id: 0,
   name: '',
   avatar: '',
   lastMessage: '',

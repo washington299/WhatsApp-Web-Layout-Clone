@@ -2,6 +2,7 @@ import { IContacts } from '../interface';
 
 export const Contacts: IContacts[] = [
   {
+    id: 1,
     name: 'Junior Oliveira',
     avatar: 'assets/images/avatar/avatar-man-1.png',
     lastMessage: 'Ok, i will do it!',
@@ -12,6 +13,7 @@ export const Contacts: IContacts[] = [
     unreadMessages: 2,
   },
   {
+    id: 2,
     name: 'Marcia Gonçalves',
     avatar: 'assets/images/avatar/avatar-woman-1.png',
     lastMessage: 'No problem, we can get it',
@@ -22,6 +24,7 @@ export const Contacts: IContacts[] = [
     unreadMessages: 5,
   },
   {
+    id: 3,
     name: 'Caio Pereira',
     avatar: 'assets/images/avatar/avatar-man-2.png',
     lastMessage: 'Right',
@@ -32,6 +35,7 @@ export const Contacts: IContacts[] = [
     unreadMessages: undefined,
   },
   {
+    id: 4,
     name: 'Vanessa Santos',
     avatar: 'assets/images/avatar/avatar-woman-2.png',
     lastMessage: 'Thank you :)',
@@ -42,6 +46,7 @@ export const Contacts: IContacts[] = [
     unreadMessages: undefined,
   },
   {
+    id: 5,
     name: 'José da Silva',
     avatar: 'assets/images/avatar/avatar-man-3.png',
     lastMessage: 'I really appretiate that',
@@ -52,6 +57,7 @@ export const Contacts: IContacts[] = [
     unreadMessages: 3,
   },
   {
+    id: 6,
     name: 'Maria Santana',
     avatar: 'assets/images/avatar/avatar-woman-3.png',
     lastMessage: 'I am sorry about it',
@@ -62,6 +68,7 @@ export const Contacts: IContacts[] = [
     unreadMessages: 12,
   },
   {
+    id: 7,
     name: 'Carlos Campos',
     avatar: 'assets/images/avatar/avatar-man-4.png',
     lastMessage: 'I will be there',
@@ -72,6 +79,7 @@ export const Contacts: IContacts[] = [
     unreadMessages: undefined,
   },
   {
+    id: 8,
     name: 'Suellen Souza',
     avatar: 'assets/images/avatar/avatar-woman-4.png',
     lastMessage: 'Ok, let\'s get it!!!',
