@@ -16,15 +16,60 @@ import MessageBox from '../../../components/MessageBox';
 
 import './styles.scss';
 
-const Body: React.FC = () => {
+type Props = {
+  user: {
+    id: number;
+    avatar: string;
+    name: string;
+  };
+};
+
+const Body = ({ user }: Props) => {
   const { display } = useChatScreenState();
   const dispatch = useChatScreenDispatch();
   const { avatar, name, lastSeen } = useContactsState();
 
-  const [listOfMessages, setListOfMessages] = useState([{}, {}, {}]);
+  const [listOfMessages, setListOfMessages] = useState([
+    {
+      author: 123,
+      body: 'In ad voluptate sit Lorem enim ullamco magna pariatur deserunt. Laborum adipisicing dolore eiusmod ad minim fugiat. Quis et ad qui ea minim esse eiusmod deserunt laborum nulla ex velit culpa deserunt. Non consectetur pariatur Lorem id cupidatat aute ex dolore proident elit.',
+    },
+    {
+      author: 1234,
+      body: 'In ad voluptate sit Lorem enim ullamco magna pariatur deserunt. Laborum adipisicing dolore eiusmod ad minim fugiat. Quis et ad qui ea minim esse eiusmod deserunt laborum nulla ex velit culpa deserunt. Non consectetur pariatur Lorem id cupidatat aute ex dolore proident elit.',
+    },
+    {
+      author: 123,
+      body: 'In ad voluptate sit Lorem enim ullamco magna pariatur deserunt. Laborum adipisicing dolore eiusmod ad minim fugiat. Quis et ad qui ea minim esse eiusmod deserunt laborum nulla ex velit culpa deserunt. Non consectetur pariatur Lorem id cupidatat aute ex dolore proident elit.',
+    },
+    {
+      author: 123,
+      body: 'In ad voluptate sit Lorem enim ullamco magna pariatur deserunt. Laborum adipisicing dolore eiusmod ad minim fugiat. Quis et ad qui ea minim esse eiusmod deserunt laborum nulla ex velit culpa deserunt. Non consectetur pariatur Lorem id cupidatat aute ex dolore proident elit.',
+    },
+    {
+      author: 1234,
+      body: 'In ad voluptate sit Lorem enim ullamco magna pariatur deserunt. Laborum adipisicing dolore eiusmod ad minim fugiat. Quis et ad qui ea minim esse eiusmod deserunt laborum nulla ex velit culpa deserunt. Non consectetur pariatur Lorem id cupidatat aute ex dolore proident elit.',
+    },
+    {
+      author: 123,
+      body: 'In ad voluptate sit Lorem enim ullamco magna pariatur deserunt. Laborum adipisicing dolore eiusmod ad minim fugiat. Quis et ad qui ea minim esse eiusmod deserunt laborum nulla ex velit culpa deserunt. Non consectetur pariatur Lorem id cupidatat aute ex dolore proident elit.',
+    },
+    {
+      author: 123,
+      body: 'In ad voluptate sit Lorem enim ullamco magna pariatur deserunt. Laborum adipisicing dolore eiusmod ad minim fugiat. Quis et ad qui ea minim esse eiusmod deserunt laborum nulla ex velit culpa deserunt. Non consectetur pariatur Lorem id cupidatat aute ex dolore proident elit.',
+    },
+    {
+      author: 1234,
+      body: 'In ad voluptate sit Lorem enim ullamco magna pariatur deserunt. Laborum adipisicing dolore eiusmod ad minim fugiat. Quis et ad qui ea minim esse eiusmod deserunt laborum nulla ex velit culpa deserunt. Non consectetur pariatur Lorem id cupidatat aute ex dolore proident elit.',
+    },
+    {
+      author: 123,
+      body: 'In ad voluptate sit Lorem enim ullamco magna pariatur deserunt. Laborum adipisicing dolore eiusmod ad minim fugiat. Quis et ad qui ea minim esse eiusmod deserunt laborum nulla ex velit culpa deserunt. Non consectetur pariatur Lorem id cupidatat aute ex dolore proident elit.',
+    },
+  ]);
 
   function handleClick() {
-    setListOfMessages([{}, {}, {}]);
+    setListOfMessages([{ author: 1, body: '' }, { author: 1, body: '' }, { author: 1, body: '' }]);
     dispatch({
       type: 'NOT_DISPLAY',
     });
@@ -51,8 +96,8 @@ const Body: React.FC = () => {
           </header>
 
           <section className="body__wallpaper">
-            {listOfMessages.map(() => (
-              <MessageBox />
+            {listOfMessages.map((msg) => (
+              <MessageBox key={msg.author} msg={msg} user={user} />
             ))}
           </section>
 

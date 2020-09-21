@@ -65,10 +65,11 @@ const Sidebar: React.FC = () => {
 
       <div className="sidebar__contacts">
         {Contacts.map(({
-          name, avatar, lastMessage, timeLastMessage, lastSeen, pinned, mute, unreadMessages,
+          id, name, avatar, lastMessage, timeLastMessage, lastSeen, pinned, mute, unreadMessages,
         }) => (
           <Contact
-            key={name}
+            key={id}
+            id={id}
             name={name}
             avatar={avatar}
             lastMessage={lastMessage}

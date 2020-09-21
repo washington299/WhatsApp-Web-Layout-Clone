@@ -2,10 +2,25 @@ import React from 'react';
 
 import './styles.scss';
 
-const MessageBox = () => (
-  <div className="message">
-    <div className="message__item">
-      <div className="message__text">In ad voluptate sit Lorem enim ullamco magna pariatur deserunt. Laborum adipisicing dolore eiusmod ad minim fugiat. Quis et ad qui ea minim esse eiusmod deserunt laborum nulla ex velit culpa deserunt. Non consectetur pariatur Lorem id cupidatat aute ex dolore proident elit.</div>
+type Props = {
+  msg: { author: number, body: string };
+  user: {
+    id: number;
+    avatar: string;
+    name: string;
+  };
+};
+
+const MessageBox = ({ msg, user }: Props) => (
+  <div
+    className="message"
+    style={user.id === msg.author ? { justifyContent: 'flex-end' } : { justifyContent: 'flex-start' }}
+  >
+    <div
+      className="message__item"
+      style={user.id === msg.author ? { backgroundColor: '#DCF8C6' } : { backgroundColor: '#FFFFFF' }}
+    >
+      <div className="message__text">{msg.body}</div>
       <div className="message__date">19:50</div>
     </div>
   </div>
