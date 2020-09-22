@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   MdComputer,
   MdSearch,
@@ -29,7 +29,7 @@ const Body = ({ user }: Props) => {
   const dispatch = useChatScreenDispatch();
   const { avatar, name, lastSeen } = useContactsState();
 
-  const [listOfMessages, setListOfMessages] = useState([
+  const initialListMessages = [
     {
       author: 123,
       body: 'In ad voluptate sit Lorem enim ullamco magna pariatur deserunt. Laborum adipisicing dolore eiusmod ad minim fugiat. Quis et ad qui ea minim esse eiusmod deserunt laborum nulla ex velit culpa deserunt. Non consectetur pariatur Lorem id cupidatat aute ex dolore proident elit.',
@@ -66,10 +66,19 @@ const Body = ({ user }: Props) => {
       author: 123,
       body: 'In ad voluptate sit Lorem enim ullamco magna pariatur deserunt. Laborum adipisicing dolore eiusmod ad minim fugiat. Quis et ad qui ea minim esse eiusmod deserunt laborum nulla ex velit culpa deserunt. Non consectetur pariatur Lorem id cupidatat aute ex dolore proident elit.',
     },
-  ]);
+  ];
+  const [listOfMessages, setListOfMessages] = useState(initialListMessages);
+
+  const body = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (body.current && body.current.scrollHeight > body.current.offsetHeight) {
+      body.current.scrollTop = body.current.scrollHeight - body.current.offsetHeight;
+    }
+  }, [avatar, listOfMessages]);
 
   function handleClick() {
-    setListOfMessages([{ author: 1, body: '' }, { author: 1, body: '' }, { author: 1, body: '' }]);
+    setListOfMessages(initialListMessages);
     dispatch({
       type: 'NOT_DISPLAY',
     });
@@ -95,9 +104,9 @@ const Body = ({ user }: Props) => {
             </div>
           </header>
 
-          <section className="body__wallpaper">
+          <section ref={body} className="body__wallpaper">
             {listOfMessages.map((msg) => (
-              <MessageBox key={msg.author} msg={msg} user={user} />
+              <MessageBox key={msg.body} msg={msg} user={user} />
             ))}
           </section>
 
