@@ -7,6 +7,7 @@ import {
   MdChevronLeft,
   MdInsertEmoticon,
   MdMic,
+  MdSend,
 } from 'react-icons/md';
 
 import { useChatScreenState, useChatScreenDispatch } from '../../../contexts/chat-screen';
@@ -68,6 +69,7 @@ const Body = ({ user }: Props) => {
     },
   ];
   const [listOfMessages, setListOfMessages] = useState(initialListMessages);
+  const [text, setText] = useState('');
 
   const body = useRef<HTMLElement>(null);
 
@@ -82,6 +84,12 @@ const Body = ({ user }: Props) => {
     dispatch({
       type: 'NOT_DISPLAY',
     });
+  }
+
+  function sendMessage(e: React.FormEvent) {
+    e.preventDefault();
+    setListOfMessages([...listOfMessages, { author: 1234, body: text }]);
+    setText('');
   }
 
   return (
@@ -110,11 +118,17 @@ const Body = ({ user }: Props) => {
             ))}
           </section>
 
-          <div className="body__text-area">
+          <form className="body__text-area" onSubmit={sendMessage}>
             <MdInsertEmoticon className="body__item" />
-            <input type="text" placeholder="Type a message" className="body__field" />
-            <MdMic className="body__item" />
-          </div>
+            <input
+              value={text}
+              type="text"
+              placeholder="Type a message"
+              className="body__field"
+              onChange={(e) => setText(e.target.value)}
+            />
+            {!text ? <MdMic className="body__item" /> : <MdSend className="body__item" onClick={sendMessage} /> }
+          </form>
         </div>
       )}
       {!display && (
