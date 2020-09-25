@@ -24,9 +24,10 @@
       @include wrapper.align-center;
 
       .options__item {
-        font-size: 22px;
         padding: sizes.$sidebar-container-size;
         color: colors.$sidebar-header-icons-color;
+        font-size: 22px;
+        cursor: pointer;
       }
     }
   }
