@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
-import { GoPlay } from 'react-icons/go';
+import { PlayCircleFilled } from '@material-ui/icons';
 
 import './styles.scss';
 
@@ -13,7 +13,7 @@ const VideoGuide: React.FC = () => {
         {!displayVideo && (
           <div className="video__play-button-area">
             <div className="video__play-button" onClick={() => setDisplayVideo(true)}>
-              <GoPlay className="video__icon" />
+              <PlayCircleFilled className="video__icon" />
             </div>
           </div>
         )}

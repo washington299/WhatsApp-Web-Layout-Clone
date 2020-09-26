@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MdColorize, MdVolumeOff, MdExpandMore } from 'react-icons/md';
+import { Colorize, VolumeOff, ExpandMore } from '@material-ui/icons';
 
 import { IContacts } from '../../interface';
 import { useChatScreenDispatch } from '../../contexts/chat-screen';
@@ -46,14 +46,14 @@ const Contact: React.FC<Props> = ({
       </div>
       <div className="contacts__details">
         <span className="details__time">{timeLastMessage}</span>
-        {pinned && <MdColorize className="details__icon" />}
-        {mute && <MdVolumeOff className="details__icon" />}
+        {pinned && <Colorize className="details__icon" />}
+        {mute && <VolumeOff className="details__icon" />}
         {hidden && (
           <div className="details__unreadMessage">
             {unreadMessages}
           </div>
         )}
-        <MdExpandMore className="details__icon options" />
+        <ExpandMore className="details__icon options" />
       </div>
     </div>
   );

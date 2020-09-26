@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
-  MdComputer,
-  MdSearch,
-  MdAttachment,
-  MdMoreVert,
-  MdChevronLeft,
-  MdInsertEmoticon,
-  MdMic,
-  MdSend,
-} from 'react-icons/md';
+  Computer,
+  Search,
+  Attachment,
+  MoreVert,
+  ChevronLeft,
+  InsertEmoticon,
+  Mic,
+  Send,
+} from '@material-ui/icons';
 
 import { useChatScreenState, useChatScreenDispatch } from '../../../contexts/chat-screen';
 import { useContactsState } from '../../../contexts/contacts';
@@ -98,7 +98,7 @@ const Body = ({ user }: Props) => {
         <div className="body__chat">
           <header className="body__header">
             <div className="body__info">
-              <MdChevronLeft className="body__arrow-back" onClick={handleClick} />
+              <ChevronLeft className="body__arrow-back" onClick={handleClick} />
               <img src={avatar} alt={name} className="body__profile-picture" />
               <div className="body__texts">
                 <h2 className="body__name">{name}</h2>
@@ -106,9 +106,9 @@ const Body = ({ user }: Props) => {
               </div>
             </div>
             <div className="body__options">
-              <MdSearch className="body__item" />
-              <MdAttachment className="body__item" />
-              <MdMoreVert className="body__item" />
+              <Search className="body__item" />
+              <Attachment className="body__item" />
+              <MoreVert className="body__item" />
             </div>
           </header>
 
@@ -119,7 +119,7 @@ const Body = ({ user }: Props) => {
           </section>
 
           <form className="body__text-area" onSubmit={sendMessage}>
-            <MdInsertEmoticon className="body__item" />
+            <InsertEmoticon className="body__item" />
             <input
               value={text}
               type="text"
@@ -127,7 +127,7 @@ const Body = ({ user }: Props) => {
               className="body__field"
               onChange={(e) => setText(e.target.value)}
             />
-            {!text ? <MdMic className="body__item" /> : <MdSend className="body__item" onClick={sendMessage} /> }
+            {!text ? <Mic className="body__item" /> : <Send className="body__item" onClick={sendMessage} /> }
           </form>
         </div>
       )}
@@ -145,7 +145,7 @@ const Body = ({ user }: Props) => {
               phone to Wi-Fi.
             </p>
             <hr />
-            <MdComputer className="body__initial-icon" />
+            <Computer className="body__initial-icon" />
             <span className="body__initial-span">
               WhatsApp is available for Windows.
               <a href="/" className="body__initial-windows-link">Get it here.</a>

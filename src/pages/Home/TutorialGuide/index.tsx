@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import QrCode from 'qrcode.react';
-import { BsArrowClockwise, BsThreeDotsVertical } from 'react-icons/bs';
-import { FiSettings } from 'react-icons/fi';
+import { Replay, MoreVert, Settings } from '@material-ui/icons';
 
 import './styles.scss';
 
@@ -38,13 +37,13 @@ const TutorialGuide: React.FC = () => {
             {' '}
             <b>Menu</b>
             {' '}
-            <BsThreeDotsVertical className="tutorial-guide__item--icon" />
+            <MoreVert className="tutorial-guide__item--icon" />
             {' '}
             or
             {' '}
             <b>Settings</b>
             {' '}
-            <FiSettings className="tutorial-guide__item--icon" />
+            <Settings className="tutorial-guide__item--icon" />
             {' '}
             and select
             {' '}
@@ -64,7 +63,7 @@ const TutorialGuide: React.FC = () => {
             style={validQrCode ? { display: 'none' } : { display: 'flex' }}
             onClick={handleClick}
           >
-            <BsArrowClockwise className="scan__reload-icon" />
+            <Replay className="scan__reload-icon" />
             <span className="scan__reload-text">CLICK TO RELOAD QR CODE</span>
           </div>
         </div>

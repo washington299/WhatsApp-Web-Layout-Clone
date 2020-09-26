@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import {
-  MdDonutLarge,
-  MdChat,
-  MdMoreVert,
-  MdNotificationsOff,
-  MdNotificationsActive,
-  MdSearch,
-} from 'react-icons/md';
+  DonutLarge,
+  Chat,
+  MoreVert,
+  NotificationsOff,
+  NotificationsActive,
+  Search,
+} from '@material-ui/icons';
 import { Contacts } from '../../../utils/data';
 
 import Contact from '../../../components/Contact';
@@ -28,9 +28,9 @@ const Sidebar: React.FC = () => {
           className="sidebar__profile-picture"
         />
         <div className="sidebar__options">
-          <MdDonutLarge className="options__item" />
-          <MdChat className="options__item" />
-          <MdMoreVert className="options__item" />
+          <DonutLarge className="options__item" />
+          <Chat className="options__item" />
+          <MoreVert className="options__item" />
         </div>
       </header>
 
@@ -38,8 +38,8 @@ const Sidebar: React.FC = () => {
         <div className="notification__circle">
           {
             notificationActive
-              ? <MdNotificationsActive className="notification__icon" />
-              : <MdNotificationsOff className="notification__icon" />
+              ? <NotificationsActive className="notification__icon" />
+              : <NotificationsOff className="notification__icon" />
           }
         </div>
         <div className="notification__texts">
@@ -58,7 +58,7 @@ const Sidebar: React.FC = () => {
 
       <div className="sidebar__search">
         <div className="search__area">
-          <MdSearch className="search__icon" />
+          <Search className="search__icon" />
           <input type="text" className="search__field" placeholder="Search or start new chat" />
         </div>
       </div>
