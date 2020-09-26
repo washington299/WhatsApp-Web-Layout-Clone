@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IconButton } from '@material-ui/core';
+import { IconButton, Avatar } from '@material-ui/core';
 import {
   DonutLarge,
   Chat,
@@ -23,11 +23,7 @@ const Sidebar: React.FC = () => {
   return (
     <aside className="sidebar" style={display && window.innerWidth < 768 ? { display: 'none' } : { display: 'flex' }}>
       <header className="sidebar__header">
-        <img
-          src="./assets/images/avatar/avatar-man-1.png"
-          alt="My Profile"
-          className="sidebar__profile-picture"
-        />
+        <Avatar />
         <div className="sidebar__options">
           <IconButton>
             <DonutLarge className="options__item" />
