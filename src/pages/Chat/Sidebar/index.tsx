@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { IconButton } from '@material-ui/core';
 import {
   DonutLarge,
   Chat,
@@ -7,8 +8,8 @@ import {
   NotificationsActive,
   Search,
 } from '@material-ui/icons';
-import { Contacts } from '../../../utils/data';
 
+import { Contacts } from '../../../utils/data';
 import Contact from '../../../components/Contact';
 
 import { useChatScreenState } from '../../../contexts/chat-screen';
@@ -28,9 +29,15 @@ const Sidebar: React.FC = () => {
           className="sidebar__profile-picture"
         />
         <div className="sidebar__options">
-          <DonutLarge className="options__item" />
-          <Chat className="options__item" />
-          <MoreVert className="options__item" />
+          <IconButton>
+            <DonutLarge className="options__item" />
+          </IconButton>
+          <IconButton>
+            <Chat className="options__item" />
+          </IconButton>
+          <IconButton>
+            <MoreVert className="options__item" />
+          </IconButton>
         </div>
       </header>
 

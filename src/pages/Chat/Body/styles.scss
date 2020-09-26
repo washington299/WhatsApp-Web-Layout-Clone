@@ -82,9 +82,8 @@
       @include wrapper.align-center;
 
       .body__item {
-        font-size: 26px;
-        padding: 0 5px;
         color: colors.$sidebar-header-icons-color;
+        font-size: 22px;
         cursor: pointer;
       }
     }
@@ -115,9 +114,8 @@
     border-top: sizes.$element-border solid #ccc;
 
     .body__item {
-      font-size: 26px;
-      padding: 0 10px;
       color: colors.$sidebar-header-icons-color;
+      font-size: 26px;
       cursor: pointer;
     }
 

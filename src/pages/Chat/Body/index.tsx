@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { IconButton } from '@material-ui/core';
 import {
   Computer,
   Search,
@@ -106,9 +107,15 @@ const Body = ({ user }: Props) => {
               </div>
             </div>
             <div className="body__options">
-              <Search className="body__item" />
-              <Attachment className="body__item" />
-              <MoreVert className="body__item" />
+              <IconButton>
+                <Search className="body__item" />
+              </IconButton>
+              <IconButton>
+                <Attachment className="body__item" />
+              </IconButton>
+              <IconButton>
+                <MoreVert className="body__item" />
+              </IconButton>
             </div>
           </header>
 
@@ -119,7 +126,7 @@ const Body = ({ user }: Props) => {
           </section>
 
           <form className="body__text-area" onSubmit={sendMessage}>
-            <InsertEmoticon className="body__item" />
+            <IconButton><InsertEmoticon className="body__item" /></IconButton>
             <input
               value={text}
               type="text"
@@ -127,7 +134,11 @@ const Body = ({ user }: Props) => {
               className="body__field"
               onChange={(e) => setText(e.target.value)}
             />
-            {!text ? <Mic className="body__item" /> : <Send className="body__item" onClick={sendMessage} /> }
+            {!text ? (
+              <IconButton><Mic className="body__item" /></IconButton>
+            ) : (
+              <IconButton><Send className="body__item" onClick={sendMessage} /></IconButton>
+            )}
           </form>
         </div>
       )}
