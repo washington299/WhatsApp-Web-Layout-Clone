@@ -17,8 +17,9 @@ import { useChatScreenState } from '../../../contexts/chat-screen';
 import './styles.scss';
 
 const Sidebar: React.FC = () => {
-  const [notificationActive, setNotificationActive] = useState<boolean>(false);
   const { display } = useChatScreenState();
+  const [notificationActive, setNotificationActive] = useState(false);
+  const [openDropDown, setOpenDropDown] = useState(false);
 
   return (
     <aside className="sidebar" style={display && window.innerWidth < 768 ? { display: 'none' } : { display: 'flex' }}>
@@ -31,8 +32,20 @@ const Sidebar: React.FC = () => {
           <IconButton>
             <Chat className="options__item" />
           </IconButton>
-          <IconButton>
+          <IconButton onClick={() => setOpenDropDown(!openDropDown)}>
             <MoreVert className="options__item" />
+            <div
+              className="sidebar__dropdown"
+              style={openDropDown ? { display: 'block' } : { display: 'none' }}
+            >
+              <div className="sidebar__action">New group</div>
+              <div className="sidebar__action">Create a room</div>
+              <div className="sidebar__action">Profile</div>
+              <div className="sidebar__action">Archived</div>
+              <div className="sidebar__action">Starred</div>
+              <div className="sidebar__action">Settings</div>
+              <div className="sidebar__action">Log out</div>
+            </div>
           </IconButton>
         </div>
       </header>
