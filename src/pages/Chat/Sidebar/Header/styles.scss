@@ -1,0 +1,49 @@
+@use '../../../../styles/core/wrapper';
+@use '../../../../styles/core/sizes';
+@use '../../../../styles/global/colors';
+
+.sidebar__header {
+	@include wrapper.align-center;
+	justify-content: space-between;
+	height: 60px;
+	padding: sizes.$sidebar-container-size;
+	background-color: colors.$chat-header-background-color;
+
+	.sidebar__profile-picture {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+	}
+	.sidebar__options {
+		@include wrapper.align-center;
+
+		.options__item {
+			color: colors.$sidebar-header-icons-color;
+			font-size: 22px;
+			cursor: pointer;
+		}
+	}
+	.sidebar__dropdown {
+		top: 45px;
+		right: 4px;
+		width: 150px;
+		height: auto;
+		position: absolute;
+		padding: 5px 0;
+		text-align: left;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26), 0 2px 10px 0 rgba(0, 0, 0, .16);
+		border: sizes.$element-border solid #ccc;
+		border-radius: 3px;
+		font-size: sizes.$default-font-size;
+		background-color: colors.$layout-quinary-color;
+		color: colors.$font-primary-color;
+
+		.sidebar__action {
+			padding: 10px 20px;
+
+			&:hover {
+					background-color: rgba(0, 0, 0, 0.04);
+			}
+		}
+	}
+}

@@ -1,18 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { IconButton, Avatar } from '@material-ui/core';
-import {
-  DonutLarge,
-  Chat,
-  MoreVert,
-  NotificationsOff,
-  NotificationsActive,
-  Search,
-} from '@material-ui/icons';
+import { NotificationsOff, NotificationsActive, Search } from '@material-ui/icons';
 
-import { Contacts } from '../../../utils/data';
+import Header from './Header';
 import Contact from '../../../components/Contact';
 
+import { Contacts } from '../../../utils/data';
 import { useChatScreenState } from '../../../contexts/chat-screen';
 
 import './styles.scss';
@@ -20,35 +12,10 @@ import './styles.scss';
 const Sidebar: React.FC = () => {
   const { display } = useChatScreenState();
   const [notificationActive, setNotificationActive] = useState(false);
-  const [openDropDown, setOpenDropDown] = useState(false);
 
   return (
     <aside className="sidebar" style={display && window.innerWidth < 768 ? { display: 'none' } : { display: 'flex' }}>
-      <header className="sidebar__header">
-        <Avatar />
-        <div className="sidebar__options">
-          <IconButton>
-            <DonutLarge className="options__item" />
-          </IconButton>
-          <IconButton>
-            <Chat className="options__item" />
-          </IconButton>
-          <IconButton onClick={() => setOpenDropDown(!openDropDown)}>
-            <MoreVert className="options__item" />
-            <div
-              className="sidebar__dropdown"
-              style={openDropDown ? { display: 'block' } : { display: 'none' }}
-            >
-              <div className="sidebar__action">New group</div>
-              <div className="sidebar__action">Profile</div>
-              <div className="sidebar__action">Settings</div>
-              <Link to="/" style={{ textDecoration: 'none', color: '#585858' }}>
-                <div className="sidebar__action">Log out</div>
-              </Link>
-            </div>
-          </IconButton>
-        </div>
-      </header>
+      <Header />
 
       <div className="sidebar__notification">
         <div className="notification__circle">
