@@ -1,8 +1,8 @@
 import React from 'react';
-import { Search } from '@material-ui/icons';
 
 import Header from './Header';
 import Notification from './Notification';
+import Search from './Search';
 import Contact from '../../../components/Contact';
 
 import { Contacts } from '../../../utils/data';
@@ -17,12 +17,7 @@ const Sidebar: React.FC = () => {
     <aside className="sidebar" style={display && window.innerWidth < 768 ? { display: 'none' } : { display: 'flex' }}>
       <Header />
       <Notification />
-      <div className="sidebar__search">
-        <div className="search__area">
-          <Search className="search__icon" />
-          <input type="text" className="search__field" placeholder="Search or start new chat" />
-        </div>
-      </div>
+      <Search />
 
       <div className="sidebar__contacts">
         {Contacts.map(({
