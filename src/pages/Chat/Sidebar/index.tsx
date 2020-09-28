@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { IconButton, Avatar } from '@material-ui/core';
 import {
   DonutLarge,
@@ -39,12 +40,11 @@ const Sidebar: React.FC = () => {
               style={openDropDown ? { display: 'block' } : { display: 'none' }}
             >
               <div className="sidebar__action">New group</div>
-              <div className="sidebar__action">Create a room</div>
               <div className="sidebar__action">Profile</div>
-              <div className="sidebar__action">Archived</div>
-              <div className="sidebar__action">Starred</div>
               <div className="sidebar__action">Settings</div>
-              <div className="sidebar__action">Log out</div>
+              <Link to="/" style={{ textDecoration: 'none', color: '#585858' }}>
+                <div className="sidebar__action">Log out</div>
+              </Link>
             </div>
           </IconButton>
         </div>
