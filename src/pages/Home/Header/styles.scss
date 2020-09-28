@@ -9,6 +9,7 @@
 .header {
   height: 90px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   color: colors.$font-secondary-color;
 
@@ -27,10 +28,22 @@
       font-weight: 600;
     }
   }
+  a {
+    text-decoration: none;
+    font-size: sizes.$big-font-size;
+    font-weight: 600;
+    color: colors.$font-secondary-color;
+    padding-right: sizes.$element-default-space-value;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 @media screen and (min-width: sizes.$screen-sm) {
-  .header .header__logo {
-    padding-left: 0;
+  .header .header__logo,
+  .header a {
+    padding: 0;
   }
 }
