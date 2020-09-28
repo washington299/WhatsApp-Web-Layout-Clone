@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { NotificationsOff, NotificationsActive, Search } from '@material-ui/icons';
+import React from 'react';
+import { Search } from '@material-ui/icons';
 
 import Header from './Header';
+import Notification from './Notification';
 import Contact from '../../../components/Contact';
 
 import { Contacts } from '../../../utils/data';
@@ -11,34 +12,11 @@ import './styles.scss';
 
 const Sidebar: React.FC = () => {
   const { display } = useChatScreenState();
-  const [notificationActive, setNotificationActive] = useState(false);
 
   return (
     <aside className="sidebar" style={display && window.innerWidth < 768 ? { display: 'none' } : { display: 'flex' }}>
       <Header />
-
-      <div className="sidebar__notification">
-        <div className="notification__circle">
-          {
-            notificationActive
-              ? <NotificationsActive className="notification__icon" />
-              : <NotificationsOff className="notification__icon" />
-          }
-        </div>
-        <div className="notification__texts">
-          <span className="notification__title">Get notified of new messages</span>
-          <span
-            className="notification__button"
-            onClick={() => setNotificationActive(!notificationActive)}
-          >
-            Turn
-            {notificationActive ? ' off ' : ' on '}
-            Desktop notifications
-            <strong style={{ marginLeft: '3px' }}>&gt;</strong>
-          </span>
-        </div>
-      </div>
-
+      <Notification />
       <div className="sidebar__search">
         <div className="search__area">
           <Search className="search__icon" />

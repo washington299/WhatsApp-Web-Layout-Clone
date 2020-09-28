@@ -8,41 +8,6 @@
   color: #000;
   border-right: 0.5px solid #ccc;
 
-  .sidebar__notification {
-    @include wrapper.align-center;
-    height: 70px;
-    padding: sizes.$sidebar-container-size;
-    background-color: colors.$notification-reminder-color;
-
-    .notification__circle {
-      margin-right: 10px;
-      padding: 8px 10px;
-      border-radius: 50%;
-      background-color: colors.$layout-quinary-color;
-
-      .notification__icon {
-        font-size: sizes.$extra-big-font-size;
-        color: colors.$notification-reminder-color;
-      }
-    }
-
-    .notification__texts {
-      .notification__title {
-        font-size: sizes.$small-font-size;
-      }
-      .notification__button {
-        display: block;
-        cursor: pointer;
-        font-size: sizes.$extra-small-font-size;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-
-
   .sidebar__search {
     @include wrapper.align-center;
     height: 50px;
