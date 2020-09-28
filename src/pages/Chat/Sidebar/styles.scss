@@ -1,26 +1,10 @@
-@use '../../../styles/core/wrapper';
 @use '../../../styles/core/sizes';
-@use '../../../styles/global/colors';
 
 .sidebar {
   flex: 1;
   flex-direction: column;
   color: #000;
   border-right: 0.5px solid #ccc;
-
-  .sidebar__contacts {
-    min-width: 340px;
-    flex: 1;
-    background-color: colors.$layout-quinary-color;
-    overflow-y: auto;
-  }
-  .sidebar__contacts::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-  }
-  .sidebar__contacts::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
 }
 
 @media screen and (min-width: sizes.$screen-md) {
