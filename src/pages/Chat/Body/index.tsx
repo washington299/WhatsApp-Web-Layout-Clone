@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { IconButton } from '@material-ui/core';
 import {
-  Computer,
   Search,
   Attachment,
   MoreVert,
@@ -11,10 +10,11 @@ import {
   Send,
 } from '@material-ui/icons';
 
+import InitialScreen from './InitialScreen';
+import MessageBox from '../../../components/MessageBox';
+
 import { useChatScreenState, useChatScreenDispatch } from '../../../contexts/chat-screen';
 import { useContactsState } from '../../../contexts/contacts';
-
-import MessageBox from '../../../components/MessageBox';
 
 import './styles.scss';
 
@@ -142,28 +142,7 @@ const Body = ({ user }: Props) => {
           </form>
         </div>
       )}
-      {!display && (
-        <section className="body" style={display ? { flex: 1, display: 'block' } : {}}>
-          <div className="body__screen">
-            <img
-              src="assets/images/whatsapp-initial-connection.jpg"
-              alt="Whatsapp connection"
-              className="body__initial-img"
-            />
-            <h1 className="body__initial-title">Keep your phone connected</h1>
-            <p className="body__initial-text">
-              WhatsApp connects to your phone to sync message. To reduce data usage, connect your
-              phone to Wi-Fi.
-            </p>
-            <hr />
-            <Computer className="body__initial-icon" />
-            <span className="body__initial-span">
-              WhatsApp is available for Windows.
-              <a href="/" className="body__initial-windows-link">Get it here.</a>
-            </span>
-          </div>
-        </section>
-      )}
+      {display === false ? (<InitialScreen display={display} />) : (<></>)}
     </>
   );
 };

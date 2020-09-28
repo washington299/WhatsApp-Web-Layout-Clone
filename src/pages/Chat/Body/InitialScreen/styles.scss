@@ -1,0 +1,47 @@
+@use '../../../../styles/core/sizes';
+@use '../../../../styles/global/colors';
+
+.initial-screen {
+  color: #000;
+  background-color: #F8F9FB;
+
+  .initial-screen__area {
+    max-width: 500px;
+    margin: 15vh auto;
+    align-items: center;
+    text-align: center;
+    color: colors.$font-tertiary-color;
+
+    .initial-screen__img {
+      width: 250px;
+    }
+    .initial-screen__title {
+      margin: 0;
+      font-weight: normal;
+      font-size: sizes.$large-font-size;
+      color: colors.$font-primary-color;
+    }
+    .initial-screen__icon {
+      vertical-align: middle;
+      font-size: sizes.$large-font-size;
+      margin-right: 5px;
+    }
+    .initial-screen__windows-link {
+      color: colors.$message-notification-color;
+      font-weight: 600;
+      text-decoration: none;
+      margin-left: 5px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: sizes.$screen-md) {
+  .initial-screen {
+    flex: 0.65;
+    display: block;
+  }
+}
