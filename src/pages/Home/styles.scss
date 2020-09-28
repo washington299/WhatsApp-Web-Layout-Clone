@@ -6,6 +6,13 @@
   width: 100%;
   background-color: colors.$layout-primary-color;
 }
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
 @media screen and (min-width: sizes.$screen-sm) {
   .top-background {
