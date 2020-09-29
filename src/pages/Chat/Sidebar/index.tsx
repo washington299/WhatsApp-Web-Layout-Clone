@@ -21,6 +21,7 @@ const Sidebar: React.FC = () => {
     >
       {showModal === 'profile' && <SidebarModal title="Profile" showModal={setShowModal} />}
       {showModal === 'newChat' && <SidebarModal title="New chat" showModal={setShowModal} />}
+      {showModal === 'newGroup' && <SidebarModal title="Add group participants" showModal={setShowModal} />}
       {showModal === 'settings' && <SidebarModal title="Settings" showModal={setShowModal} />}
       {showModal === '' && (
         <>

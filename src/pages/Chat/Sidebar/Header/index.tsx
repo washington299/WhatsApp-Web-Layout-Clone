@@ -28,7 +28,7 @@ const SidebarHeader = ({ showModal }: Props) => {
             className="sidebar__dropdown"
             style={openDropDown ? { display: 'block' } : { display: 'none' }}
           >
-            <div className="sidebar__action">New group</div>
+            <div className="sidebar__action" onClick={() => showModal('newGroup')}>New group</div>
             <div className="sidebar__action" onClick={() => showModal('profile')}>Profile</div>
             <div className="sidebar__action" onClick={() => showModal('settings')}>Settings</div>
             <Link to="/" style={{ textDecoration: 'none', color: '#585858' }}>
