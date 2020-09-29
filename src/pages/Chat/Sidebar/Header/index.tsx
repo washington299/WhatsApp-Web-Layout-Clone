@@ -30,7 +30,7 @@ const SidebarHeader = ({ showModal }: Props) => {
           >
             <div className="sidebar__action">New group</div>
             <div className="sidebar__action" onClick={() => showModal('profile')}>Profile</div>
-            <div className="sidebar__action">Settings</div>
+            <div className="sidebar__action" onClick={() => showModal('settings')}>Settings</div>
             <Link to="/" style={{ textDecoration: 'none', color: '#585858' }}>
               <div className="sidebar__action">Log out</div>
             </Link>

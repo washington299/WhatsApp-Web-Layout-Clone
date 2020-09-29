@@ -20,6 +20,7 @@ const Sidebar: React.FC = () => {
       style={display && window.innerWidth < 768 ? { display: 'none' } : { display: 'flex' }}
     >
       {showModal === 'profile' && <SidebarModal title="profile" showModal={setShowModal} />}
+      {showModal === 'settings' && <SidebarModal title="settings" showModal={setShowModal} />}
       {showModal === '' && (
         <>
           <Header showModal={setShowModal} />
