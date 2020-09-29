@@ -5,12 +5,16 @@ import { DonutLarge, Chat, MoreVert } from '@material-ui/icons';
 
 import './styles.scss';
 
-const SidebarHeader = () => {
+type Props = {
+  showModal: React.Dispatch<React.SetStateAction<string>>;
+};
+
+const SidebarHeader = ({ showModal }: Props) => {
   const [openDropDown, setOpenDropDown] = useState(false);
 
   return (
     <header className="sidebar__header">
-      <Avatar />
+      <Avatar onClick={() => showModal('profile')} />
       <div className="sidebar__options">
         <IconButton>
           <DonutLarge className="options__item" />
@@ -25,7 +29,7 @@ const SidebarHeader = () => {
             style={openDropDown ? { display: 'block' } : { display: 'none' }}
           >
             <div className="sidebar__action">New group</div>
-            <div className="sidebar__action">Profile</div>
+            <div className="sidebar__action" onClick={() => showModal('profile')}>Profile</div>
             <div className="sidebar__action">Settings</div>
             <Link to="/" style={{ textDecoration: 'none', color: '#585858' }}>
               <div className="sidebar__action">Log out</div>
