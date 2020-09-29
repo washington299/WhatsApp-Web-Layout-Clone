@@ -19,7 +19,7 @@ const SidebarHeader = ({ showModal }: Props) => {
         <IconButton>
           <DonutLarge className="options__item" />
         </IconButton>
-        <IconButton>
+        <IconButton onClick={() => showModal('newChat')}>
           <Chat className="options__item" />
         </IconButton>
         <IconButton onClick={() => setOpenDropDown(!openDropDown)}>
