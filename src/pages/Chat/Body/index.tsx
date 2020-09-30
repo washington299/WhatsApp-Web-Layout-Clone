@@ -14,7 +14,6 @@ type Props = {
     name: string;
   };
 };
-
 const Body = ({ user }: Props) => {
   const { display } = useChatScreenState();
 
@@ -23,7 +22,7 @@ const Body = ({ user }: Props) => {
       {display ? (
         <Chat user={user} />
       ) : (
-        <InitialScreen display={display} />
+        <InitialScreen displayChatScreen={display} />
       )}
     </>
   );

@@ -2,6 +2,7 @@
 @use '../../../../styles/global/colors';
 
 .initial-screen {
+  display: none;
   color: #000;
   background-color: #F8F9FB;
 
@@ -41,7 +42,7 @@
 
 @media screen and (min-width: sizes.$screen-md) {
   .initial-screen {
-    flex: 0.65;
+    flex: 0.60;
     display: block;
   }
 }

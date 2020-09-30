@@ -4,11 +4,14 @@ import { Computer } from '@material-ui/icons';
 import './styles.scss';
 
 type Props = {
-  display: boolean;
+  displayChatScreen: boolean;
 };
 
-const BodyInitialScreen = ({ display }: Props) => (
-  <section className="initial-screen" style={display ? { display: 'none' } : { flex: 1, display: 'block' }}>
+const BodyInitialScreen = ({ displayChatScreen }: Props) => (
+  <section
+    className="initial-screen"
+    style={displayChatScreen ? { display: 'none' } : { }}
+  >
     <div className="initial-screen__area">
       <img
         src="assets/images/whatsapp-initial-connection.jpg"
@@ -29,5 +32,4 @@ const BodyInitialScreen = ({ display }: Props) => (
     </div>
   </section>
 );
-
 export default BodyInitialScreen;
