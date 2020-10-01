@@ -45,4 +45,8 @@
       z-index: 1;
     }
   }
+  .profile__box {
+    height: 100px;
+    background-color: colors.$layout-quinary-color;
+  }
 }

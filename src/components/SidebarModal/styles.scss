@@ -1,22 +1,26 @@
 @use '../../styles//global/colors';
 @use '../../styles//core/sizes';
 
+$header-height: 100px;
+$header-padding-side: 20px;
+$header-padding-size: 10px;
+
 .modal {
 	display: flex;
 	flex-direction: column;
 
 	.modal__header {
-		height: 100px;
 		display: flex;
 		align-items: flex-end;
+		height: $header-height - $header-padding-size * 2;
 		background-color: colors.$layout-primary-color;
 		color: colors.$layout-quinary-color;
 		font-size: sizes.$big-font-size;
 		font-weight: 600;
+		padding: $header-padding-size $header-padding-side;
 	}
-	.modal__arrow,
 	.modal__title {
-		margin: 0 0 10px 10px;
+		margin-left: 10px;
 	}
 	.modal__arrow {
 		cursor: pointer;
