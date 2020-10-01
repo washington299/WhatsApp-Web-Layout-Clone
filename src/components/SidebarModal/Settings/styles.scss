@@ -1,0 +1,46 @@
+@use '../../../styles/global/colors';
+@use '../../../styles/core/sizes';
+
+.settings {
+  height: 100%;
+  background-color: colors.$layout-quinary-color;
+
+  .settings__profile {
+    height: 130px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px 10px 0 10px;
+
+    &:hover {
+      background-color: colors.$chat-header-background-color;
+      cursor: pointer;
+    }
+
+    .settings__picture{
+      width: 100px;
+      height: 100px;
+    }
+    .settings__description {
+      font-size: sizes.$big-font-size;
+      margin-top: 20px;
+    }
+  }
+  .settings__option {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: colors.$chat-header-background-color;
+      cursor: pointer;
+    }
+
+    .settings__icon {
+      color: #666;
+      padding: 15px 20px;
+    }
+    .settings__text {
+      font-size: sizes.$big-font-size;
+    }
+  }
+}
