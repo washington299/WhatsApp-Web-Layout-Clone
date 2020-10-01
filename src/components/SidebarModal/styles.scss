@@ -8,12 +8,13 @@ $header-padding-size: 10px;
 .modal {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
+	background-color: colors.$layout-secondary-color;
 
 	.modal__header {
 		display: flex;
 		align-items: flex-end;
 		height: $header-height - $header-padding-size * 2;
-		background-color: colors.$layout-primary-color;
 		color: colors.$layout-quinary-color;
 		font-size: sizes.$big-font-size;
 		font-weight: 600;
