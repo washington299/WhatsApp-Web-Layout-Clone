@@ -17,18 +17,13 @@ $padding: 15px 30px 10px;
     background-color: colors.$chat-header-background-color;
 
     .profile__shadow {
-      display: flex;
       position: absolute;
       background-color: #666;
       color: colors.$font-secondary-color;
       font-size: sizes.$big-font-size;
       border-radius: 50%;
       opacity: 0.5;
-      z-index: 0;
-
-      &:hover {
-        z-index: 99;
-      }
+      z-index: 99;
 
       .profile__shadow-content {
         display: flex;
@@ -46,7 +41,6 @@ $padding: 15px 30px 10px;
       height: 200px;
       border-radius: 50%;
       cursor: pointer;
-      z-index: 1;
     }
   }
   .profile__title {
