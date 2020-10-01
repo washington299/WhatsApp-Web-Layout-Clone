@@ -2,12 +2,12 @@
 @use '../../../styles//core/sizes';
 
 $box-height: 100px;
-$padding-size: 10px;
-$padding-side: 20px;
+$padding: 15px 30px 10px;
 
 .profile {
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 
   .profile__img-area {
     height: 200px;
@@ -49,15 +49,17 @@ $padding-side: 20px;
       z-index: 1;
     }
   }
+  .profile__title {
+    color: colors.$layout-secondary-color;
+    margin-bottom: 15px;
+  }
   .profile__box {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: $box-height - $padding-size * 2;
-    padding: $padding-size $padding-side;
+    padding: $padding;
     font-size: sizes.$small-font-size;
     background-color: colors.$layout-quinary-color;
-    color: colors.$layout-secondary-color;
     font-weight: 600;
   }
   .profile__info {
@@ -79,8 +81,7 @@ $padding-side: 20px;
     }
   }
   .profile__text {
-    height: 80px - $padding-size * 2;
-    padding: $padding-size $padding-side;
+    padding: $padding;
     background-color: colors.$chat-header-background-color;
     color: colors.$font-primary-color
   }

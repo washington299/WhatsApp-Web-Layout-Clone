@@ -9,6 +9,10 @@
 	padding: sizes.$sidebar-container-size;
 	background-color: colors.$chat-header-background-color;
 
+	.sidebar__avatar {
+		cursor: pointer;
+	}
+
 	.sidebar__profile-picture {
 		width: 40px;
 		height: 40px;

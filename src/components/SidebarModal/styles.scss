@@ -9,12 +9,13 @@ $header-padding-size: 10px;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	background-color: colors.$layout-secondary-color;
+	background-color: colors.$chat-header-background-color;
 
 	.modal__header {
 		display: flex;
 		align-items: flex-end;
 		height: $header-height - $header-padding-size * 2;
+		background-color: colors.$layout-secondary-color;
 		color: colors.$layout-quinary-color;
 		font-size: sizes.$big-font-size;
 		font-weight: 600;

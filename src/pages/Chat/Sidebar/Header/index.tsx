@@ -14,7 +14,7 @@ const SidebarHeader = ({ showModal }: Props) => {
 
   return (
     <header className="sidebar__header">
-      <Avatar onClick={() => showModal('profile')} />
+      <Avatar className="sidebar__avatar" onClick={() => showModal('profile')} />
       <div className="sidebar__options">
         <IconButton>
           <DonutLarge className="options__item" />
