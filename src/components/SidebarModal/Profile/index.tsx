@@ -34,7 +34,7 @@ const Profile = () => (
     <div className="profile__box">
       <span className="profile__title">About</span>
       <div className="profile__info">
-        <input type="text" defaultValue="In the end it doesn't even matter." className="profile__input" />
+        <input type="text" defaultValue="In the end it doesn't even matter" className="profile__input" />
         <Edit className="profile__icon--edit" />
       </div>
     </div>

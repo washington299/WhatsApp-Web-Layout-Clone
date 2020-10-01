@@ -1,6 +1,10 @@
 @use '../../../styles/global/colors';
 @use '../../../styles//core/sizes';
 
+$box-height: 100px;
+$padding-size: 10px;
+$padding-side: 20px;
+
 .profile {
   display: flex;
   flex-direction: column;
@@ -46,7 +50,43 @@
     }
   }
   .profile__box {
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: $box-height - $padding-size * 2;
+    padding: $padding-size $padding-side;
+    font-size: sizes.$small-font-size;
     background-color: colors.$layout-quinary-color;
+    color: colors.$layout-secondary-color;
+    font-weight: 600;
+  }
+  .profile__info {
+    display: flex;
+    justify-content: space-between;
+
+    .profile__input {
+      flex: 1;
+      margin-right: 10px;
+      padding: 5px 0;
+      border: none;
+      outline: none;
+      font-size: 17px;
+      color: #666;
+
+      &:focus {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+  .profile__text {
+    height: 80px - $padding-size * 2;
+    padding: $padding-size $padding-side;
+    background-color: colors.$chat-header-background-color;
+    color: colors.$font-primary-color
+  }
+  .profile__icon--edit {
+    vertical-align: middle;
+    color: #666;
+    cursor: pointer;
   }
 }
