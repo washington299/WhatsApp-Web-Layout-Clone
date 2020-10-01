@@ -8,9 +8,8 @@
   .settings__profile {
     height: 130px;
     display: flex;
-    justify-content: space-around;
     align-items: flex-start;
-    padding: 20px 10px 0 10px;
+    padding: 20px 20px 0 20px;
 
     &:hover {
       background-color: colors.$chat-header-background-color;
@@ -24,6 +23,7 @@
     .settings__description {
       font-size: sizes.$big-font-size;
       margin-top: 20px;
+      margin-left: 10px;
     }
   }
   .settings__option {
