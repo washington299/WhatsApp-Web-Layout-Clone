@@ -1,7 +1,9 @@
 import React from 'react';
 
+import FindContacts from '../FindContacts';
+
 const NewGroup = () => (
-  <div>New Group</div>
+  <FindContacts />
 );
 
 export default NewGroup;
