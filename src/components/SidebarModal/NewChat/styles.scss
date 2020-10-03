@@ -28,6 +28,7 @@
         color: colors.$sidebar-header-icons-color;
         font-size: sizes.$extra-big-font-size;
         cursor: pointer;
+        vertical-align: middle;
       }
       .newChat__input {
         width: calc(100% - 60px);
@@ -54,6 +55,16 @@
     .newChat__icon--group-add {
       width: 50px;
       height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: colors.$layout-secondary-color;
+      color: colors.$font-secondary-color;
+      border-radius: 50%;
+
+      svg {
+        font-size: 2rem;
+      }
     }
     .newChat__text {
       margin: 5px 0 0 10px;

@@ -9,12 +9,16 @@ const NewChat = () => (
   <section className="newChat">
     <div className="newChat__search">
       <div className="newChat__search-area">
-        <Search className="newChat__icon--search" />
+        <div>
+          <Search className="newChat__icon--search" />
+        </div>
         <input type="text" placeholder="Search contacts" className="newChat__input" />
       </div>
     </div>
     <div className="newChat__newGroup-add">
-      <GroupAdd className="newChat__icon--group-add" />
+      <div className="newChat__icon--group-add">
+        <GroupAdd />
+      </div>
       <div className="newChat__text">New Group</div>
     </div>
     <FindContacts />
