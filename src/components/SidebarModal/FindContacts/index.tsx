@@ -9,7 +9,6 @@ const FindContacts = () => {
 
   return (
     <section className="find-contacts">
-      <input type="text" placeholder="Type contact name" className="find-contacts__search" />
       <div className="find-contacts__list">
         {letters.map((letter) => (
           <>
