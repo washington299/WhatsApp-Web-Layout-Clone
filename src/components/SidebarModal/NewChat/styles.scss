@@ -1,0 +1,62 @@
+@use '../../../styles/global/colors';
+@use '../../../styles/core/sizes';
+@use '../../../styles/core/wrapper';
+
+.newChat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: colors.$layout-quinary-color;
+  overflow-x: hidden;
+
+  .newChat__search {
+    @include wrapper.align-center;
+    padding: sizes.$sidebar-container-size;
+    background-color: colors.$search-background-color;
+
+    .newChat__search-area {
+      @include wrapper.align-center;
+      width: 100%;
+      height: 70%;
+      background-color: colors.$layout-quinary-color;
+      border: 0.5px solid colors.$chat-header-background-color;
+      border-radius: 30px;
+      margin: 10px 0;
+  
+      .newChat__icon--search {
+        margin: 5px 10px;
+        color: colors.$sidebar-header-icons-color;
+        font-size: sizes.$extra-big-font-size;
+        cursor: pointer;
+      }
+      .newChat__input {
+        width: calc(100% - 60px);
+        height: calc(100% - 15px);
+        padding: 5px;
+        font-size: sizes.$small-font-size;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+  .newChat__newGroup-add {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    border-bottom: 0.1px solid #EEE;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: colors.$chat-header-background-color;
+    }
+
+    .newChat__icon--group-add {
+      width: 50px;
+      height: 50px;
+    }
+    .newChat__text {
+      margin: 5px 0 0 10px;
+    }
+  }
+}
