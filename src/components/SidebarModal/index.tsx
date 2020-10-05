@@ -15,7 +15,7 @@ type Props = {
 };
 
 const SidebarModal = ({ title, showModal, setShowModal }: Props) => (
-  <div className="modal" style={{ left: showModal !== '' ? 0 : -500 }}>
+  <div className="modal" style={{ left: showModal !== '' ? 0 : -768 }}>
     <header className="modal__header">
       <ArrowBack className="modal__arrow" onClick={() => setShowModal('')} />
       <span className="modal__title">{title}</span>
