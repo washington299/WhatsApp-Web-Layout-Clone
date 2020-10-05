@@ -19,18 +19,16 @@ const Sidebar: React.FC = () => {
       className="sidebar"
       style={display && window.innerWidth < 768 ? { display: 'none' } : { display: 'flex' }}
     >
-      {showModal === 'profile' && <SidebarModal screen="profile" title="Profile" showModal={setShowModal} />}
-      {showModal === 'newChat' && <SidebarModal screen="newChat" title="New chat" showModal={setShowModal} />}
-      {showModal === 'newGroup' && <SidebarModal screen="newGroup" title="Add group participants" showModal={setShowModal} />}
-      {showModal === 'settings' && <SidebarModal screen="settings" title="Settings" showModal={setShowModal} />}
-      {showModal === '' && (
-        <>
-          <Header showModal={setShowModal} />
-          <Notification />
-          <Search />
-          <Chats />
-        </>
-      )}
+      <div className="default">
+        <Header showModal={setShowModal} />
+        <Notification />
+        <Search />
+        <Chats />
+      </div>
+      <SidebarModal title="Profile" showModal={showModal} setShowModal={setShowModal} />
+      <SidebarModal title="New chat" showModal={showModal} setShowModal={setShowModal} />
+      <SidebarModal title="Add group participants" showModal={showModal} setShowModal={setShowModal} />
+      <SidebarModal title="Settings" showModal={showModal} setShowModal={setShowModal} />
     </aside>
   );
 };

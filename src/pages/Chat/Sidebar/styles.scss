@@ -1,12 +1,19 @@
 @use '../../../styles/core/sizes';
 
 .sidebar {
-  flex: 1;
+	width: 35%;
+  max-width: 415px;
   flex-direction: column;
   color: #000;
   border-right: 0.5px solid #ccc;
-}
+  overflow: hidden;
 
-@media screen and (min-width: sizes.$screen-md) {
-  .sidebar { flex: 0.40; }
+  .default {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: #EDEDED;
+  }
 }

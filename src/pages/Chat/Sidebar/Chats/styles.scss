@@ -1,8 +1,6 @@
 @use '../../../../styles/global/colors';
 
 .sidebar__chats {
-	min-width: 340px;
-	flex: 1;
 	background-color: colors.$layout-quinary-color;
 	overflow-y: auto;
 }
