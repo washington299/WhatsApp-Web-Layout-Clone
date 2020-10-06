@@ -10,7 +10,11 @@ const Settings = () => (
   <section className="settings">
     <div className="settings__profile">
       <Avatar className="settings__picture" />
-      <span className="settings__description">Washington Campos 👶</span>
+      <span className="settings__description">
+        Washington Campos
+        {' '}
+        <span role="img" aria-label="baby">👶</span>
+      </span>
     </div>
     <div className="settings__actions">
       <div className="settings__option">
