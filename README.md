@@ -4,20 +4,35 @@
 
 This is a Responsive Whatsapp Web Clone, this project was made to improve my Skills and habilities with CSS BEM architecture, SASS, React, Typescript and Context API.
 
-## Techs 💻
+## Desktop
+
+<p align="center">
+<img src="/public/assets/images/thumbnails/laptop.png" width="350" />
+<img src="/public/assets/images/thumbnails/laptop2.png" width="350" />
+</p>
+
+## Mobile
+
+<p align="center">
+<img src="/public/assets/images/thumbnails/iphone.png" width="350" />
+<img src="/public/assets/images/thumbnails/iphone2.png" width="350" />
+<img src="/public/assets/images/thumbnails/iphone3.png" width="350" />
+</p>
+
+### Techs 💻
 
 - [ReactJs](https://reactjs.org).
 - [Typescript](https://www.typescriptlang.org).
 - [Sass](https://sass-lang.com).
 
-## Style guide tools 🛠️
+### Style guide tools 🛠️
 
 - [Eslint](https://eslint.org).
 - [Lint-staged](https://github.com/okonet/lint-staged).
 - [Husky](https://github.com/typicode/husky).
 - [Git-commit-msg-linter](https://github.com/legend80s/commit-msg-linter#readme).
 
-## Material UI Icons used 🖼️
+### Material UI Icons used 🖼️
 
 - DonutLarge
 - Chat
@@ -50,12 +65,12 @@ This is a Responsive Whatsapp Web Clone, this project was made to improve my Ski
 - Settings
 - PlayCircleFilled
 
-## Libs 📚
+### Libs 📚
 
 - [React-router-dom](https://reactrouter.com).
 - [Qrcode-React](https://www.npmjs.com/package/qrcode.react)
 
-## Running project 👨‍💻
+### Running project 👨‍💻
 
 clone this repository by copying this command and pasting in your terminal 👇
 
