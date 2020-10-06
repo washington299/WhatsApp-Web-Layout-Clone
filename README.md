@@ -1,4 +1,6 @@
-<h1 align="center">Whatsapp Web Clone</h1>
+<p align="center">
+<img src="https://i0.wp.com/singlepoint.com.br/wp-content/uploads/2018/08/logo-whatsapp-1.png?ssl=1" height="150" />
+</p>
 
 This is a Responsive Whatsapp Web Clone, this project was made to improve my Skills and habilities with CSS BEM architecture, SASS, React, Typescript and Context API.
 
@@ -15,12 +17,14 @@ This is a Responsive Whatsapp Web Clone, this project was made to improve my Ski
 - [Husky](https://github.com/typicode/husky).
 - [Git-commit-msg-linter](https://github.com/legend80s/commit-msg-linter#readme).
 
-## Material UI Icons
+## Material UI Icons used
 
 - DonutLarge
 - Chat
 - MoreVert
+- Notifications
 - NotificationsOff
+- NotificationsActive
 - Search
 - Colorize
 - VolumeOff
@@ -30,38 +34,63 @@ This is a Responsive Whatsapp Web Clone, this project was made to improve my Ski
 - Attachment
 - InsertEmoticon
 - Mic
+- send
+- ArrowBack
+- GroupAdd
+- Avatar
+- CameraAlt
+- Edit
+- Brightness6
+- Wallpaper
+- Block
+- Help
+- IconButton
+- WhatsApp
+- Replay
+- Settings
+- PlayCircleFilled
 
 ## Libs
 
 - [React-router-dom](https://reactrouter.com).
+- [Qrcode-React](https://www.npmjs.com/package/qrcode.react)
 
-## Setup
+## Running project 👨‍💻
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+clone this repository by copying this command and pasting in your terminal 👇
 
-## Available Scripts
+```github
+git clone https://github.com/washington299/WhatsApp-Web-Layout-Clone.git
+```
 
-In the project directory, you can run:
+go to your project folder by pasting this command in your terminal 👇
 
-### `yarn start`
+##### windows
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```github
+cd .\WhatsApp-Web-Layout-Clone\
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+##### Linux
 
-### `yarn test`
+```github
+cd ./WhatsApp-Web-Layout-Clone
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Then open the folder in your editor and run the project by typing this command:
 
-### `yarn build`
+```github
+yarn start
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### ou
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```github
+npm run start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Then open your browser and type this address: `http://localhost:3000`.
+
+---
+
+made with ❤️ by [Washington Campos](https://github.com/washington299).
