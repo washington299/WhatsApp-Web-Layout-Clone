@@ -5,7 +5,11 @@ import FindContacts from '../FindContacts';
 
 import './styles.scss';
 
-const NewChat = () => (
+type Props = {
+  setShowModal: React.Dispatch<React.SetStateAction<string>>;
+};
+
+const NewChat = ({ setShowModal }: Props) => (
   <section className="newChat">
     <div className="newChat__search">
       <div className="newChat__search-area">
@@ -15,7 +19,7 @@ const NewChat = () => (
         <input type="text" placeholder="Search contacts" className="newChat__input" />
       </div>
     </div>
-    <div className="newChat__newGroup-add">
+    <div className="newChat__newGroup-add" onClick={() => setShowModal('New group')}>
       <div className="newChat__icon--group-add">
         <GroupAdd />
       </div>

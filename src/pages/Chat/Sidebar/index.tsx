@@ -25,10 +25,10 @@ const Sidebar: React.FC = () => {
         <Search />
         <Chats />
       </div>
-      <SidebarModal title="Profile" showModal={showModal} setShowModal={setShowModal} />
-      <SidebarModal title="New chat" showModal={showModal} setShowModal={setShowModal} />
-      <SidebarModal title="Add group participants" showModal={showModal} setShowModal={setShowModal} />
-      <SidebarModal title="Settings" showModal={showModal} setShowModal={setShowModal} />
+      <SidebarModal showModal={showModal} setShowModal={setShowModal} />
+      <SidebarModal showModal={showModal} setShowModal={setShowModal} />
+      <SidebarModal showModal={showModal} setShowModal={setShowModal} />
+      <SidebarModal showModal={showModal} setShowModal={setShowModal} />
     </aside>
   );
 };

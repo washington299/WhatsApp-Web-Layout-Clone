@@ -9,21 +9,20 @@ import Settings from './Settings';
 import './styles.scss';
 
 type Props = {
-  title: string;
   showModal: string;
   setShowModal: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const SidebarModal = ({ title, showModal, setShowModal }: Props) => (
+const SidebarModal = ({ showModal, setShowModal }: Props) => (
   <div className="modal" style={{ left: showModal !== '' ? 0 : -768 }}>
     <header className="modal__header">
       <ArrowBack className="modal__arrow" onClick={() => setShowModal('')} />
-      <span className="modal__title">{title}</span>
+      <span className="modal__title">{showModal}</span>
     </header>
-    {showModal === 'profile' && <Profile />}
-    {showModal === 'newChat' && <NewChat />}
-    {showModal === 'newGroup' && <NewGroup />}
-    {showModal === 'settings' && <Settings />}
+    {showModal === 'Profile' && <Profile />}
+    {showModal === 'New chat' && <NewChat setShowModal={setShowModal} />}
+    {showModal === 'New group' && <NewGroup />}
+    {showModal === 'Settings' && <Settings />}
   </div>
 );
 
